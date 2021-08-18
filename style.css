@@ -3,26 +3,26 @@
     padding: 0%;
     box-sizing: border-box;
 }   
-
+/****************** body ******************/
 body{
     display: flex;
     flex-direction: column;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    background-color:#30343f ;
+    color: white;
 }
 h1{
     font-size: 2.2rem;
-    font-weight: 900;
-    
+    font-weight: 800;
 }
 h1, h2{
-    
     text-align: center;
-    text-shadow:2px 3px 0px #898999;
-    letter-spacing: 2px;
-    color:white;
+   
+   
+    color:rgb(255, 255, 255);
 }
 h2{
-    font-weight: 700;
+    font-weight: 500;
 }
 
 
@@ -32,10 +32,86 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #383535;
+    background-color: #191e2b;
 }
 .contenedor-btns{
     padding-top: 1em;
+}
+.btn-header{
+    background-color: transparent;
+    border: transparent;
+    color: white;
+    padding: 0.5em;
+    margin-right: 0.5em;
+}
+.btn-header:hover{
+    background-color: rgb(112, 110, 110);
+    border-radius: 3px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    transition: 0.2s;
+}
+.iconheader{
+    margin-right:0.3em;
+}
+/**********Contenedor meme**********/
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+  }
+
+.memeseccion{
+    background-color: rgb(53, 53, 53);
+}
+
+#imagenmeme{
+    height: 300px;
+    width: 420px;
+}
+
+.textosuperior, .textoinferior{
+    color: rgb(7, 6, 6);
+    font-weight: 900;
+    font-size: 1.8rem;
+    background-color: rgb(255, 255, 255);
+    padding:5%;
+    display: flex;
+    justify-content: center;
+}
+.botondescargar{
+    margin-top: 1.5%;
+    padding: 0.6em;
+    color: white;
+    background-color: green;
+    border: hidden;
+}
+.botondescargar:hover{
+    transition: 0.2s;
+    background-color: rgba(0, 128, 0, 0.507);
+}
+.iconodescargar{
+    padding-right: 0.5em;
+}
+
+
+/**********Aside**********/
+
+.aside-imagen{
+    display: flex;
+  
+    flex-direction: column;
+    align-items: center;
+    border: hotpink 1px solid;
+    background-color:#252935 ;
+    font-size: 0.8rem;
+}
+h3{
+    font-weight: 300;
+    
 }
 
 
