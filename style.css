@@ -6,11 +6,12 @@
 /****************** body ******************/
 body{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     font-family: 'Montserrat', sans-serif;
     background-color:#30343f ;
     color: white;
 }
+
 h1{
     font-size: 2.2rem;
     font-weight: 800;
@@ -22,15 +23,20 @@ h1, h2{
     color:rgb(255, 255, 255);
 }
 h2{
-    font-weight: 500;
+    margin-bottom: 10%;
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
-
+section{
+    flex-basis: 90%;
+}
 /**********Header**********/
 header{
     padding: 0.93em 0px 1.56em 0px;
     display: flex;
     flex-direction: column;
+    flex-basis: 50%;
     align-items: center;
     background-color: #191e2b;
 }
@@ -101,17 +107,74 @@ main {
 /**********Aside**********/
 
 .aside-imagen{
+    border:  violet solid 1px;
+    padding: 2em 0px 1.56em 0px;
     display: flex;
-  
+    width: 22%;
+    max-height: 100%;
     flex-direction: column;
-    align-items: center;
-    border: hotpink 1px solid;
+    padding-left: 1%;
     background-color:#252935 ;
     font-size: 0.8rem;
+    text-align: left;
 }
 h3{
     font-weight: 300;
-    
+    margin-bottom: 4%;
+}
+input{
+    background-color:#393e49 ;
+    border: hidden;
+    color: white;
+    border-radius:3px;
+    margin-bottom: 6%;
+}
+
+input:hover{
+    background-color: #4e5565;
+}
+input[type="text"]{ 
+    padding: 0.9em;
+    width: 90%;
+
+}
+.fondoimg{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+    margin-bottom: 5%;
+}
+select{
+    display: flex;
+    align-self: center;
+    background-color:#393e49;
+    border-radius: 3px;
+    background-color:#393e49 ;
+    border: hidden;
+    color: white;
+    border-radius:3px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 3px;
+}
+
+.fondocolor > p{
+    padding-left: 4px;
+}
+input[type="color"]{ 
+    width: 30px;
+    border: none;
+    background-color: transparent;
+}
+.fondocolor{
+    display: flex;
+    background-color:#393e49;
+    border-radius: 3px;
+    padding: 2px 4px 2px 4px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
