@@ -8,8 +8,10 @@ body{
     display: flex;
     flex-direction: row;
     font-family: 'Montserrat', sans-serif;
-    background-color:#30343f ;
+    
     color: white;
+    height:100vh;
+    border: solid yellow 5px;
 }
 
 h1{
@@ -18,8 +20,6 @@ h1{
 }
 h1, h2{
     text-align: center;
-   
-   
     color:rgb(255, 255, 255);
 }
 h2{
@@ -29,14 +29,17 @@ h2{
 }
 
 section{
+    background-color:#30343f;
+    
     flex-basis: 90%;
+    background-color:
 }
 /**********Header**********/
 header{
     padding: 0.93em 0px 1.56em 0px;
     display: flex;
     flex-direction: column;
-    flex-basis: 50%;
+    flex-basis: 80%;
     align-items: center;
     background-color: #191e2b;
 }
@@ -62,21 +65,25 @@ header{
 }
 /**********Contenedor meme**********/
 main {
+    background-color:#30343f;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 1.5%;
-    margin-bottom: 1.5%;
+    padding-top: 1.5%;
+    padding-bottom: 0.5%;
+    
   }
 
 .memeseccion{
     background-color: rgb(53, 53, 53);
+    
 }
 
 #imagenmeme{
     height: 300px;
     width: 420px;
+    
 }
 
 .textosuperior, .textoinferior{
@@ -107,11 +114,12 @@ main {
 /**********Aside**********/
 
 .aside-imagen{
-    border:  violet solid 1px;
+    border: solid blue 5px;
     padding: 2em 0px 1.56em 0px;
     display: flex;
-    width: 22%;
-    max-height: 100%;
+    
+    width: 260px;
+  height: 100%;
     flex-direction: column;
     padding-left: 1%;
     background-color:#252935 ;
@@ -176,5 +184,6 @@ input[type="color"]{
     align-items: center;
     justify-content: space-between;
 }
+/***filtros***/
 
 
