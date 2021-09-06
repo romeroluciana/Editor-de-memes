@@ -87,11 +87,23 @@ main {
     width: 420px;
     
 }
+.titulo{
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    margin: 10px;
+    letter-spacing: -1px;
+}
+@media(max-width:768px){
+    .titulo{
+        font-size: 26px;
+    }
+}
 
 .textosuperior, .textoinferior{
     color: rgb(7, 6, 6);
     font-weight: 800;
-    font-size: 55px;
+    font-size: 50px;
     background-color: rgb(255, 255, 255);
     padding: 21px 50px;
     display: flex;
@@ -101,18 +113,18 @@ main {
 }
 @media (max-width:992px){
     .textosuperior{
-        font-size: 45px;
+        font-size: 40px;
     }
     .textoinferior{
-        font-size: 45px;
+        font-size: 40px;
     }
 }
 @media(max-width:768px){
     .textosuperior{
-        font-size: 38px;
+        font-size: 35px;
     }
     .textoinferior{
-        font-size: 38px;
+        font-size: 35px;
     }
 }
 @media(max-width: 576px){
