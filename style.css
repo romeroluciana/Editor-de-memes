@@ -8,9 +8,10 @@ body{
     display: flex;
     flex-direction: row;
     font-family: 'Montserrat', sans-serif;
+    width: 100%;
     
     color: white;
-    height:100vh;
+  
     border: solid yellow 5px;
 }
 
@@ -30,10 +31,11 @@ h2{
 
 section{
     background-color:#30343f;
-    
-    flex-basis: 90%;
-    background-color:
+    width: 100%;
+
+  
 }
+
 /**********Header**********/
 header{
     padding: 0.93em 0px 1.56em 0px;
@@ -85,16 +87,55 @@ main {
     width: 420px;
     
 }
+.titulo{
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    margin: 10px;
+    letter-spacing: -1px;
+}
+@media(max-width:768px){
+    .titulo{
+        font-size: 26px;
+    }
+}
 
 .textosuperior, .textoinferior{
     color: rgb(7, 6, 6);
-    font-weight: 900;
-    font-size: 1.8rem;
+    font-weight: 800;
+    font-size: 50px;
     background-color: rgb(255, 255, 255);
-    padding:5%;
+    padding: 21px 50px;
     display: flex;
     justify-content: center;
+    position: static;
+    white-space: nowrap;
 }
+@media (max-width:992px){
+    .textosuperior{
+        font-size: 40px;
+    }
+    .textoinferior{
+        font-size: 40px;
+    }
+}
+@media(max-width:768px){
+    .textosuperior{
+        font-size: 35px;
+    }
+    .textoinferior{
+        font-size: 35px;
+    }
+}
+@media(max-width: 576px){
+    .textosuperior{
+        font-size: 29px;
+    }
+    .textoinferior{
+        font-size: 29px;
+    }
+}
+
 .botondescargar{
     margin-top: 1.5%;
     padding: 0.6em;
@@ -125,6 +166,11 @@ main {
     background-color:#252935 ;
     font-size: 0.8rem;
     text-align: left;
+}
+@media (max-width:992px){
+    .aside-imagen{
+        display: none;
+    }
 }
 h3{
     font-weight: 300;
