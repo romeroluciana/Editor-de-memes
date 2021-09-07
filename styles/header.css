@@ -1,0 +1,16 @@
+.title{
+    font-size: 36px;
+    margin: 10px;
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+.header-btn:focus, .header-btn:hover{
+    background: #4e5565;
+}
+.btn-icon{
+    font-size: 14px;
+    margin-right: 0.35em;
+}
