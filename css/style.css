@@ -32,7 +32,9 @@ h2{
 section{
     background-color:#30343f;
     width: 100%;
-    
+    background-image: url(./123Z_2101.w020.n001.949B.p15.949.jpg) ;
+    background-size: 100%;
+    background-repeat: no-repeat;
 
   
 }
@@ -44,7 +46,7 @@ header{
     flex-direction: column;
     flex-basis: 80%;
     align-items: center;
-    background-color: #191e2b;
+    background-color: #e1c2fa;
 }
 .contenedor-btns{
     padding-top: 1em;
@@ -75,6 +77,10 @@ main {
     flex-direction: column;
     padding-top: 1.5%;
     padding-bottom: 0.5%;
+    background-image: url(./583.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: 100%;
     
   }
 
