@@ -20,18 +20,18 @@
   --text-color: #ffffff;
 }
 .light-mode {
-  /*--mesh-gradient:background-image:#ff00bb;background-image:  
+  --mesh-gradient: /*background image*/
   radial-gradient(at 40% 20%, hsla(276,66%,74%,1) 0, transparent 50%),  
   radial-gradient(at 80% 0%, hsla(310,54%,79%,1) 0, transparent 50%),  
   radial-gradient(at 0% 50%, hsla(355,85%,93%,1) 0, transparent 50%),  
   radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0, transparent 50%),  
   radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0, transparent 50%),  
   radial-gradient(at 80% 100%, hsla(243,66%,86%,1) 0, transparent 50%),  
-  radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0, transparent 50%);*/
+  radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0, transparent 50%);
+  --background-gradient:#ff00bb;  
   --header-color: #fcd0fc;
-  /*--aside-design: backdrop-filter: blur(21px) saturate(163%);
-  -webkit-backdrop-filter: blur(21px) saturate(163%);
-  background-color: rgba(255, 255, 255, 0.54);*/
+  --aside-design:blur(21px) saturate(163%)/*backdrop-filter: , webkit*/;
+  --background-aside: rgba(255, 255, 255, 0.54);
   --wave-color: #A956B9;
   --input-color: #DBADEC;
   --input-focus-color: #bdbdbd;
