@@ -3,41 +3,47 @@
   padding: 0;
   box-sizing: border-box;
 }
-:root{
-  --selected-color: #000;
-}
-body.dark-mode {
-  --header-color: #191e2b;
-  --background-color: #30343f;
-  --aside-color: #252935;
-  --input-color: #393e49;
-  --input-focus-color: #4e5565;
-  --range-color: #5a5d68;
-  --range-focus-color: #9e9e9e;
-  --save-btn-color: #1b5e20;
-  --text-color: #ffffff;
-}
-body.light-mode {
-  --mesh-gradient: /*background image*/
-  radial-gradient(at 40% 20%, hsla(276,66%,74%,1) 0, transparent 50%),  
-  radial-gradient(at 80% 0%, hsla(310,54%,79%,1) 0, transparent 50%),  
-  radial-gradient(at 0% 50%, hsla(355,85%,93%,1) 0, transparent 50%),  
-  radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0, transparent 50%),  
-  radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0, transparent 50%),  
-  radial-gradient(at 80% 100%, hsla(243,66%,86%,1) 0, transparent 50%),  
-  radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0, transparent 50%);
-  --background-gradient:#ff00bb;  
+.light-mode {
+  --selected-color: #9a819b;
   --header-color: #fcd0fc;
-  --aside-color:blur(21px) saturate(163%)/*backdrop-filter: , webkit*/;
-  --aside-color: rgba(255, 255, 255, 0.54);
-  --wave-color: #A956B9;
-  --input-color: #DBADEC;
-  --input-focus-color: #bdbdbd;
-  --range-color: #DBADEC;
-  --range-focus-color: mediumpurple;
-  --save-btn-color:rgb(71, 6, 71);
-  --background-save-btn: #ffffff;
-  --text-color: rgb(71, 6, 71);
+  --background-first-color: #ffffff;
+  --background-color:
+      radial-gradient(at 40% 20%, #c591e8 0, transparent 50%),
+      radial-gradient(at 80% 0%, #e6addd 0, transparent 50%),
+      radial-gradient(at 0% 50%, #fcdee1 0, transparent 50%),
+      radial-gradient(at 80% 50%, #ff85ad 0, transparent 50%),
+      radial-gradient(at 0% 100%, #ffb58a 0, transparent 50%),
+      radial-gradient(at 80% 100%, #c6c4f3 0, transparent 50%),
+      radial-gradient(at 0% 0%, #ff85a7 0, transparent 50%);
+  --aside-color: #e6bde6;
+  --input-color: #fee9fe;
+  --input-focus-color: #dbadec;
+  --range-color: #dbadec;
+  --range-focus-color: #fee9fe;
+  --btn-text-color: #971997;
+  --text-color: #470647;
+  --secondary-color: #a956b9;
+}
+.dark-mode {
+  --background-first-color:#000000;
+  --selected-color: #0a021a;
+  --header-color: #23014e;
+  --background-color:
+    radial-gradient(at 40% 20%, #22054b 0, transparent 50%),
+    radial-gradient(at 80% 0%, #120129 0, transparent 50%),
+    radial-gradient(at 0% 50%, #1e1749 0, transparent 50%),
+    radial-gradient(at 80% 50%, #2b0a58 0, transparent 50%),
+    radial-gradient(at 0% 100%, #130425 0, transparent 50%),
+    radial-gradient(at 80% 100%, #08003f 0, transparent 50%),
+    radial-gradient(at 0% 0%, #201650 0, transparent 50%);
+  --aside-color: #221a56;
+  --input-color: #41347a;
+  --input-focus-color: #54439d;
+  --range-color: #41347a;
+  --range-focus-color: #6654b6;
+  --save-text-color: #bfa1ff;
+  --text-color: #e8defc;
+  --secondary-color: #3a1785;
 }
 .none {
   display: none;
@@ -51,21 +57,24 @@ button {
   display: flex;
   flex-direction: row;
   color: var(--text-color);
-  background: none;
+  background-color: var(--input-color);
   align-items: center;
   border-radius: 3px;
+  color: var(--btn-text-color);
   margin: 2.5px;
-  height:35px;
+  margin-right: 4px;
+  height: 35px;
   padding: 0 10px;
   font-size: 14px;
   cursor: pointer;
 }
 body {
-  font-family: 'Montserrat', sans-serif; ;
-  background-color: var(--background-color);
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--background-first-color);
+  background-image: var(--background-color);
+  color: var(--text-color);
   height: 100vh;
   width: 100%;
-  color: var(--text-color);
   display: flex;
   flex-direction: column;
 }
@@ -88,13 +97,35 @@ body {
   display: flex;
   position: absolute;
   flex-direction: column;
+  z-index: 1000;
   right: 0;
   top: 0;
   background-color: var(--aside-color);
 }
 
-@media screen and (max-width: 700px){
-  .header .title{
+@media screen and (max-width: 700px) {
+  .header .title {
     font-size: 26px;
   }
-} 
+}
+.custom-shape-divider-bottom-1631046614 {
+  position: absolute;
+  z-index: -100;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1631046614 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 89px;
+}
+
+.custom-shape-divider-bottom-1631046614 .shape-fill {
+  fill: var(--secondary-color);
+}

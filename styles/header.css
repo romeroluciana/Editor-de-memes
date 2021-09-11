@@ -1,6 +1,7 @@
 .title{
     font-size: 36px;
     margin: 10px;
+    color: var(--text-color);
 }
 .nav{
     display: flex;
@@ -8,7 +9,7 @@
     margin-bottom: 5px;
 }
 .header-btn:focus, .header-btn:hover{
-    background: #4e5565;
+    background: var(--input-focus-color);
 }
 .btn-icon{
     font-size: 14px;

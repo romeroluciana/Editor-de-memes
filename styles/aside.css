@@ -1,5 +1,6 @@
 .aside {
-  padding: 30px 15px;
+  padding: 30px 15px;  
+  position: absolute;
 }
 .subtitle {
   text-align: center;
@@ -40,6 +41,8 @@ input[type='color'] {
 }
 .color-input-container .span {
   position: absolute;
+  padding: 5px;
+  font-size: 12px;
   pointer-events: none;
   top: 0;
   left: 0;
@@ -84,7 +87,7 @@ input[type='color'] {
   height: 6px;
   width: 100%;
   border-radius: 10px;
-  background: var(--range-color);
+  background:var(--range-color) ;
   -webkit-appearance: none;
 }
 .range::-webkit-slider-thumb {
@@ -103,14 +106,14 @@ input[type='color'] {
   background-color: var(--input-color);
   outline: none;
   border: none;
-  color: var(--text-color);
   height: 36px;
   padding: 5px 10px;
   border-radius: 5px;
   align-self: flex-start;
-  margin-top: 10px;
+  padding-top: 10px;
+  
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1062px) {
   .aside {
     display: none;
   }
