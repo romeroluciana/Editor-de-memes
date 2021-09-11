@@ -1,140 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Crea tus memes y descárgalos con esta aplicación">
     <title>Editor de memes</title>
-    <script src="https://kit.fontawesome.com/78a221b1ef.js" crossorigin="anonymous"></script>
-    <!--Favicon-->
-    <link rel="shortcut icon" href="images/kitty.svg" type="image/x.icon">
-    <!--CSS-->
+    <!--css-->
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/aside.css">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/78a221b1ef.js" crossorigin="anonymous"></script>
+    <!--FAVICON-->
+    <link rel="shortcut icon" href="./kitty.svg" type="image/x.icon">
     <!--Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-
-<body class="dark-mode">
-    <div>
-        <!--**********************************
-                        HEADER              
-            **********************************-->
-        <header class="header">
-            <h1 class="title">Generador de Memes</h1>
-            <nav class="nav">
-                <button class="header-btn" aria-label="Filtros de imagen">
-                    <i class="fas fa-file-image btn-icon" aria-hidden="true"></i>
-                    <p>Imagen</p>
-                </button>
-                <button class="header-btn" aria-label="Filtros de texto">
-                    <i class="fas fa-font btn-icon" aria-hidden="true"></i>
-                    <p>Texto</p>
-                </button>
-                <button class="header-btn none" aria-label="Cambiar a modo oscuro">
-                    <i class="far fa-lightbulb btn-icon" aria-hidden="true"></i>
-                    <p>Modo oscuro</p>
-                </button>
-                <button class="header-btn" aria-label="Cambiar a modo claro">
-                    <i class="fas fa-lightbulb btn-icon" aria-hidden="true"></i>
-                    <p>Modo claro</p>
-                </button>
-            </nav>
-        </header>
-        <!--Fin HEADER-->
-        <!--**********************************
-                        MAIN             
-            **********************************-->
-        <main class="main">
-            <section class="meme-container">
-                <div class="text-container">
-                    <p class="meme-text top">
-                        TOP TEXT
-                    </p>
-                </div>
-                <div class="img-container">
-                    <img src="" class="meme-img">
-                </div>
-                <div class="text-container">
-                    <p class="meme-text bottom">
-                        BOTTOM TEXT
-                    </p>
-                </div>
-            </section>
-            <button class="download-btn">
-                <i class="fas fa-download btn-icon"></i>
-                <p>Descargar meme</p>
-            </button>
-        </main>
-        <!--Fin Main-->
-    <!--**********************************
-                   ASIDE IMAGEN           
-        **********************************-->
-    <aside class="aside">
-        <h2 class="subtitle">IMAGEN</h2>
-        <div class="aside-container">
-            <label for="url-input" class="bold-label">URL</label>
-            <input type="url" id="url-input" class="url-input">
-        </div>
-        <div class="aside-container">
-            <label class="bold-label">FONDO</label>
-            <div class="wrapper">
-                    <div class="color-input-container">
-                        <input type="color" class="color-input" id="color-input" value="#000000">
-                        <span class="span"><div class="circle"></div> #000000</span>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Crea tus memes y descárgalos con esta aplicación">
+        <title>Editor de memes</title>
+        <script src="https://kit.fontawesome.com/78a221b1ef.js" crossorigin="anonymous"></script>
+        <!--Favicon-->
+        <link rel="shortcut icon" href="images/kitty.svg" type="image/x.icon">
+        <!--CSS-->
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/aside.css">
+        <!--Google fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    </head>
+    
+    <body class="dark-mode">
+        <div>
+            <!--**********************************
+                            HEADER              
+                **********************************-->
+            <header class="header">
+                <h1 class="title">Generador de Memes</h1>
+                <nav class="nav">
+                    <button class="header-btn" aria-label="Filtros de imagen">
+                        <i class="fas fa-file-image btn-icon" aria-hidden="true"></i>
+                        <p>Imagen</p>
+                    </button>
+                    <button class="header-btn" aria-label="Filtros de texto">
+                        <i class="fas fa-font btn-icon" aria-hidden="true"></i>
+                        <p>Texto</p>
+                    </button>
+                    <button class="header-btn none" aria-label="Cambiar a modo oscuro">
+                        <i class="far fa-lightbulb btn-icon" aria-hidden="true"></i>
+                        <p>Modo oscuro</p>
+                    </button>
+                    <button class="header-btn" aria-label="Cambiar a modo claro">
+                        <i class="fas fa-lightbulb btn-icon" aria-hidden="true"></i>
+                        <p>Modo claro</p>
+                    </button>
+                </nav>
+            </header>
+            <!--Fin HEADER-->
+            <!--**********************************
+                            MAIN             
+                **********************************-->
+            <main class="main">
+                <section class="meme-container">
+                    <div class="text-container">
+                        <p class="meme-text top">
+                            TOP TEXT
+                        </p>
                     </div>
-                    <div class="select-blemd">
-                        <select name="blend-mode" class="blend-list">
-                            <option value="unset">Ninguno</option>
-                            <option value="lighten">Aclarar</option>
-                            <option value="darken">Oscurecer</option>
-                            <option value="difference">Diferencia</option>
-                            <option value="luminosity">Luminosidad</option>
-                            <option value="multiply">Multiplicar</option>
-                        </select>
+                    <div class="img-container">
+                        <img src="" class="meme-img">
                     </div>
+                    <div class="text-container">
+                        <p class="meme-text bottom">
+                            BOTTOM TEXT
+                        </p>
+                    </div>
+                </section>
+                <button class="download-btn">
+                    <i class="fas fa-download btn-icon"></i>
+                    <p>Descargar meme</p>
+                </button>
+            </main>
+            <!--Fin Main-->
+        <!--**********************************
+                       ASIDE IMAGEN           
+            **********************************-->
+        <aside class="aside">
+            <h2 class="subtitle">IMAGEN</h2>
+            <div class="aside-container">
+                <label for="url-input" class="bold-label">URL</label>
+                <input type="url" id="url-input" class="url-input">
             </div>
-        </div>
-        <div class="aside-container">
-            <label class="bold-label">FILTROS</label>
-            <div class="filter-container">
-                <label for="brightness" class="label">BRILLO</label>
-                <input type="range" name="brightness" id="brightness" maxlength="100" value="100" class="range">
-
-                <label for="opacity" class="label">OPACIDAD</label>
-                <input type="range" name="opacity" id="opacity" maxlength="100" value="100" class="range">
-
-                <label for="contrast" class="label">CONTRASTE</label>
-                <input type="range" name="contrast" id="contrast" maxlength="100" value="0" class="range">
-
-                <label for="blur" class="label">DESENFOQUE</label>
-                <input type="range" name="blur" id="blur" maxlength="100" value="0" class="range">
-
-                <label for="grayscale" class="label">ESCALA DE GRISES</label>
-                <input type="range" name="grayscale" id="grayscale" maxlength="100" value="0" class="range">
-
-                <label for="sepia" class="label">SEPIA</label>
-                <input type="range" name="sepia" id="sepia" maxlength="100" value="0" class="range">
-
-                <label for="hue" class="label">HUE</label>
-                <input type="range" name="hue" id="hue" maxlength="100" value="0" class="range">
-
-                <label for="saturation" class="label">SATURADO</label>
-                <input type="range" name="saturation" id="saturation" maxlength="100" value="0" class="range">
-
-                <label for="invert" class="label">NEGATIVO</label>
-                <input type="range" name="invert" id="invert" maxlength="100" value="0" class="range">
+            <div class="aside-container">
+                <label class="bold-label">FONDO</label>
+                <div class="wrapper">
+                        <div class="color-input-container">
+                            <input type="color" class="color-input" id="color-input" value="#000000">
+                            <span class="span"><div class="circle"></div> #000000</span>
+                        </div>
+                        <div class="select-blemd">
+                            <select name="blend-mode" class="blend-list">
+                                <option value="unset">Ninguno</option>
+                                <option value="lighten">Aclarar</option>
+                                <option value="darken">Oscurecer</option>
+                                <option value="difference">Diferencia</option>
+                                <option value="luminosity">Luminosidad</option>
+                                <option value="multiply">Multiplicar</option>
+                            </select>
+                        </div>
+                </div>
             </div>
-        </div>
-        <button class="refresh-btn">Reestablecer filtros</button>
-    </aside>
-    <!--Fin ASIDE-->
+            <div class="aside-container">
+                <label class="bold-label">FILTROS</label>
+                <div class="filter-container">
+                    <label for="brightness" class="label">BRILLO</label>
+                    <input type="range" name="brightness" id="brightness" maxlength="100" value="100" class="range">
+    
+                    <label for="opacity" class="label">OPACIDAD</label>
+                    <input type="range" name="opacity" id="opacity" maxlength="100" value="100" class="range">
+    
+                    <label for="contrast" class="label">CONTRASTE</label>
+                    <input type="range" name="contrast" id="contrast" maxlength="100" value="0" class="range">
+    
+                    <label for="blur" class="label">DESENFOQUE</label>
+                    <input type="range" name="blur" id="blur" maxlength="100" value="0" class="range">
+    
+                    <label for="grayscale" class="label">ESCALA DE GRISES</label>
+                    <input type="range" name="grayscale" id="grayscale" maxlength="100" value="0" class="range">
+    
+                    <label for="sepia" class="label">SEPIA</label>
+                    <input type="range" name="sepia" id="sepia" maxlength="100" value="0" class="range">
+    
+                    <label for="hue" class="label">HUE</label>
+                    <input type="range" name="hue" id="hue" maxlength="100" value="0" class="range">
+    
+                    <label for="saturation" class="label">SATURADO</label>
+                    <input type="range" name="saturation" id="saturation" maxlength="100" value="0" class="range">
+    
+                    <label for="invert" class="label">NEGATIVO</label>
+                    <input type="range" name="invert" id="invert" maxlength="100" value="0" class="range">
+                </div>
+            </div>
+            <button class="refresh-btn">Reestablecer filtros</button>
+        </aside>
+        <!--Fin ASIDE-->
+    </body>
+    
+    </html>
+    
 </body>
-
 </html>
