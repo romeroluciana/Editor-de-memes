@@ -19,31 +19,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!--js-->
+    <script src="./main.js"></script>
 </head>
-<body>
-    <!DOCTYPE html>
-    <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Crea tus memes y descárgalos con esta aplicación">
-        <title>Editor de memes</title>
-        <script src="https://kit.fontawesome.com/78a221b1ef.js" crossorigin="anonymous"></script>
-        <!--Favicon-->
-        <link rel="shortcut icon" href="images/kitty.svg" type="image/x.icon">
-        <!--CSS-->
-        <link rel="stylesheet" href="styles/style.css">
-        <link rel="stylesheet" href="styles/header.css">
-        <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="styles/aside.css">
-        <!--Google fonts-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    </head>
-    
     <body class="dark-mode">
         <div>
             <!--**********************************
@@ -60,11 +38,11 @@
                         <i class="fas fa-font btn-icon" aria-hidden="true"></i>
                         <p>Texto</p>
                     </button>
-                    <button class="header-btn none" aria-label="Cambiar a modo oscuro">
+                    <button class="header-btn none" id="dark-mode-button" aria-label="Cambiar a modo oscuro">
                         <i class="far fa-lightbulb btn-icon" aria-hidden="true"></i>
                         <p>Modo oscuro</p>
                     </button>
-                    <button class="header-btn" aria-label="Cambiar a modo claro">
+                    <button class="header-btn" id="light-mode-button" aria-label="Cambiar a modo claro">
                         <i class="fas fa-lightbulb btn-icon" aria-hidden="true"></i>
                         <p>Modo claro</p>
                     </button>
