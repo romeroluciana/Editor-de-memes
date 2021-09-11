@@ -1,0 +1,117 @@
+.aside {
+  padding: 30px 15px;
+}
+.subtitle {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.bold-label {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.label {
+  font-size: 12px;
+  margin: 10px 0;
+}
+.aside-container {
+  margin-bottom: 17px;
+}
+.aside-container,
+.filter-container {
+  display: flex;
+  flex-direction: column;
+}
+.blend-list,
+.url-input,
+input[type='color'] {
+  background-color: var(--input-color);
+  outline: none;
+  border: none;
+  color: var(--text-color);
+  height: 36px;
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.color-input-container {
+  position: relative;
+}
+.color-input-container .span {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--input-color);
+}
+.span .circle {
+  background-color: var(--selected-color);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 0 10px 0;
+}
+.blend-list:focus,
+.url-input:focus,
+.color-input:focus + .span,
+.color-input:focus,
+.blendlist:hover,
+.url-input:hover,
+.color-input:hover + .span,
+.color-input:hover 
+{
+  background-color: var(--input-focus-color);
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.wrapper div {
+  width: 50%;
+  margin: 0 5px;
+}
+.color-input {
+  background: none;
+  outline: none;
+  border: none;
+}
+.range {
+  height: 6px;
+  width: 100%;
+  border-radius: 10px;
+  background: var(--range-color);
+  -webkit-appearance: none;
+}
+.range::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--text-color);
+  border: 0;
+  -webkit-appearance: none;
+}
+.range:focus {
+  background: var(--range-focus-color);
+  -webkit-appearance: none;
+}
+.refresh-btn{
+  background-color: var(--input-color);
+  outline: none;
+  border: none;
+  color: var(--text-color);
+  height: 36px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  align-self: flex-start;
+  margin-top: 10px;
+}
+@media screen and (max-width: 992px) {
+  .aside {
+    display: none;
+  }
+}
