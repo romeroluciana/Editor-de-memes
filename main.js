@@ -1,15 +1,11 @@
 /*Modo claro/oscuro*/
-const cambiarModoClaro = () =>{
-    document.body.classList.remove('dark-mode')
-    document.body.classList.add('light-mode')
+const body = document.querySelector('body')
+const botonOscuro = document.getElementById('dark-mode-button')
+const botonClaro = document.getElementById('light-mode-button')
+
+const changeMode = () =>{
+    body.classList.toggle('dark-mode')
+    body.classList.toggle('light-mode')
 }
-const cambiarModoOscuro = () =>{
-    document.body.classList.remove('light-mode')
-    document.body.classList.add('dark-mode')
-}
-const cambiarTema = () =>{
-    let botonOscuro = document.getElementById('dark-mode-button')
-    botonOscuro.addEventListener('click', cambiarModoClaro)
-    let botonClaro = document.getElementById('light-mode-button')
-    botonClaro.addEventListener('click', cambiarModoOscuro)
-}
+botonOscuro.addEventListener('click', changeMode)
+botonClaro.addEventListener('click', changeMode)

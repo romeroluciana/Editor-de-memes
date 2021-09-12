@@ -16,10 +16,10 @@
     margin-bottom: 15px;
 }
 .text-container{
-    background: var(--text-color);
+    background: #ffffff;
     font-family: 'impact';
     color: #000000;
-    font-weight: 900;
+    font-weight: 600;
     font-size: 38px;
     padding: 10px;
     text-align: center;
