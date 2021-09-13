@@ -27,8 +27,8 @@
 .img-container{
     height: 50vh;
     max-height: 450px;
-    background: #000000;
+    background: var(--selected-color);
 }
 .download-btn{
-    background: var(--save-btn-color);
+    background-color: var(--input-color);
 }

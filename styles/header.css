@@ -7,8 +7,11 @@
     flex-direction: row;
     margin-bottom: 5px;
 }
+.header-btn{
+    background-color: var(--input-color);
+}
 .header-btn:focus, .header-btn:hover{
-    background: #4e5565;
+    background-color: var(--input-focus-color);
 }
 .btn-icon{
     font-size: 14px;

@@ -6,6 +6,8 @@ const botonClaro = document.getElementById('light-mode-button')
 const changeMode = () =>{
     body.classList.toggle('dark-mode')
     body.classList.toggle('light-mode')
+    botonClaro.toggle('botonOscuro')
+    
 }
 botonOscuro.addEventListener('click', changeMode)
 botonClaro.addEventListener('click', changeMode)
