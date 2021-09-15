@@ -12,4 +12,5 @@ Desarrollado con ❤️ por el grupo 1 de la 10ma generación frontend en Ada It
 - Agustina Acevedo
 - Luciana Romero
 - Karletty Carolina Elías Pérez
+- Alejandra D'Ambrosio
 - Georgina Solange Barroso
