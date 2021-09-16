@@ -1,5 +1,6 @@
 .aside {
   padding: 30px 15px;
+  overflow-y: scroll;
 }
 .subtitle {
   text-align: center;
@@ -10,6 +11,7 @@
   font-size: 12px;
   font-weight: 600;
   margin-bottom: 8px;
+  margin-top: 8%;
 }
 .label {
   font-size: 12px;
@@ -23,9 +25,11 @@
   display: flex;
   flex-direction: column;
 }
+.color-value{
+  width: 50%;
+}
 .blend-list,
-.url-input,
-input[type='color'] {
+.url-input {
   background-color: var(--input-color);
   outline: none;
   border: none;
@@ -34,9 +38,54 @@ input[type='color'] {
   width: 100%;
   padding: 5px 10px;
   border-radius: 5px;
+  
+}
+.check-flex{
+  display: flex;
+  align-items: center;
+}
+.check-flex label{
+  margin-left: 1%;
+}
+
+.number-input{
+  background-color: var(--input-color);
+  outline: none;
+  border: none;
+  color: var(--text-color);
+  height: 36px;
+  width: 50%;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 1.2%;
+}
+.number-space{
+  background-color: var(--input-color);
+  outline: none;
+  border: none;
+  color: var(--text-color);
+  height: 36px;
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 1.2%;
+}
+.alienation-buttons{
+  display: flex;
+}
+.contour-buttons{
+  display: flex;
+}
+.font-scnd-section{
+  display: flex;
+  margin-bottom: 4%;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .color-input-container {
+  font-size: 13px;
   position: relative;
+  overflow:hidden;
 }
 .color-input-container .span {
   position: absolute;
@@ -49,6 +98,19 @@ input[type='color'] {
   border-radius: 5px;
   background: var(--input-color);
 }
+
+input[type='color']{
+  font-size: 5px;
+  background-color: var(--input-color);
+  outline: none;
+  border: none;
+  color: var(--text-color);
+  height: 36px;
+  width: 50%;
+  padding: 5px 50px;
+  border-radius: 5px;
+}
+
 .span .circle {
   background-color: var(--selected-color);
   width: 15px;
@@ -72,8 +134,7 @@ input[type='color'] {
   flex-direction: row;
 }
 .wrapper div {
-  width: 50%;
-  margin: 0 5px;
+  width: 100%;
 }
 .color-input {
   background: none;
@@ -110,6 +171,7 @@ input[type='color'] {
   align-self: flex-start;
   margin-top: 10px;
 }
+
 @media screen and (max-width: 992px) {
   .aside {
     display: none;

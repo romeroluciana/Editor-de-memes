@@ -16,11 +16,11 @@ const changeMode = () => {
     // Si el modo es DARK vamos a pasar a modo claro
     if (modeStatus.length > 0) { // AQUI NOS FIJAMOS CUANTOS ELEMENTOS se obtuvieron con getELementsByClassName
        console.log("ESTA EN DARK MODE");
-       textToggle.textContent = "Modo Claro"
+       textToggle.textContent = "Modo claro"
     // Si el modo es LIGH vamos a pasar a modo oscuro 
     } else {
         console.log("Esta en light mode")
-        textToggle.textContent = "Modo Oscuro"
+        textToggle.textContent = "Modo oscuro"
     }
     // OPCIONAL DESCOMENTAMOS ESTA LINEA Y TENEMOS UN SHORTCUT PARA EL IF 
     // textToggle.textContent = modeStatus.length > 0 ? "Modo Claro" : "Modo Oscuro"
