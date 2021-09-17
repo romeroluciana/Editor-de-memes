@@ -23,7 +23,6 @@
     
 </head>
     <body class="dark-mode body">
-        <div>
             <!--**********************************
                             HEADER              
                 **********************************-->
@@ -70,173 +69,180 @@
                 </button>
             </main>
             <!--Fin Main-->
-        <!--**********************************
-                       ASIDE IMAGEN           
-            **********************************-->
-        <aside class="aside">
-            <h2 class="subtitle">IMAGEN</h2>
-            <div class="aside-container">
-                <label for="url-input" class="bold-label">URL</label>
-                <input type="url" id="url-input" class="url-input">
-            </div>
-            <div class="aside-container">
-                <label class="bold-label">FONDO</label>
-                <div class="wrapper">
-                        <div class="color-input-container">
-                            <input type="color" class="color-input" id="color-input" value="#000000">
-                            <span class="span"><div class="circle"></div> #000000</span>
-                        </div>
-                        <div class="select-blemd">
-                            <select name="blend-mode" class="blend-list">
-                                <option value="unset">Ninguno</option>
-                                <option value="lighten">Aclarar</option>
-                                <option value="darken">Oscurecer</option>
-                                <option value="difference">Diferencia</option>
-                                <option value="luminosity">Luminosidad</option>
-                                <option value="multiply">Multiplicar</option>
-                            </select>
-                        </div>
-                </div>
-            </div>
-            <div class="aside-container">
-                <label class="bold-label">FILTROS</label>
-                <div class="filter-container">
-                    <label for="brightness" class="label">BRILLO</label>
-                    <input type="range" name="brightness" id="brightness" maxlength="100" value="100" class="range">
-    
-                    <label for="opacity" class="label">OPACIDAD</label>
-                    <input type="range" name="opacity" id="opacity" maxlength="100" value="100" class="range">
-    
-                    <label for="contrast" class="label">CONTRASTE</label>
-                    <input type="range" name="contrast" id="contrast" maxlength="100" value="0" class="range">
-    
-                    <label for="blur" class="label">DESENFOQUE</label>
-                    <input type="range" name="blur" id="blur" maxlength="100" value="0" class="range">
-    
-                    <label for="grayscale" class="label">ESCALA DE GRISES</label>
-                    <input type="range" name="grayscale" id="grayscale" maxlength="100" value="0" class="range">
-    
-                    <label for="sepia" class="label">SEPIA</label>
-                    <input type="range" name="sepia" id="sepia" maxlength="100" value="0" class="range">
-    
-                    <label for="hue" class="label">HUE</label>
-                    <input type="range" name="hue" id="hue" maxlength="100" value="0" class="range">
-    
-                    <label for="saturation" class="label">SATURADO</label>
-                    <input type="range" name="saturation" id="saturation" maxlength="100" value="0" class="range">
-    
-                    <label for="invert" class="label">NEGATIVO</label>
-                    <input type="range" name="invert" id="invert" maxlength="100" value="0" class="range">
-                </div>
-            </div>
-            <button class="refresh-btn">Reestablecer filtros</button>
-        </aside>
-        <!--Fin ASIDE IMAGEN-->
 
-        <!--**********************************
+           <!--**********************************
+                       ASIDE          
+                **********************************-->
+         <aside>
+             <section class="aside"><h2 class="subtitle">IMAGEN</h2>
+                  <div class="aside-container">
+                      <label for="url-input" class="bold-label">URL</label>
+                      <input type="url" id="url-input" class="url-input">
+                  </div>
+                  <div class="aside-container">
+                     <label class="bold-label">FONDO</label>
+                     <div class="wrapper">
+                          <div class="color-input-container">
+                             <input type="color" class="color-input" id="color-input" value="#000000">
+                             <span class="span"><div class="circle"></div> #000000</span>
+                          </div>
+                          <div class="select-blemd">
+                             <select name="blend-mode" class="blend-list">
+                                  <option value="unset">Ninguno</option>
+                                  <option value="lighten">Aclarar</option>
+                                  <option value="darken">Oscurecer</option>
+                                  <option value="difference">Diferencia</option>
+                                  <option value="luminosity">Luminosidad</option>
+                                  <option value="multiply">Multiplicar</option>
+                             </select>
+                         </div>
+                     </div>
+                  </div>
+                   <div class="aside-container">
+                     <label class="bold-label">FILTROS</label>
+                     <div class="filter-container">
+                         <label for="brightness" class="label">BRILLO</label>
+                         <input type="range" name="brightness" id="brightness" maxlength="100" value="100" class="range">
+    
+                         <label for="opacity" class="label">OPACIDAD</label>
+                         <input type="range" name="opacity" id="opacity" maxlength="100" value="100" class="range">
+    
+                         <label for="contrast" class="label">CONTRASTE</label>
+                         <input type="range" name="contrast" id="contrast" maxlength="100" value="0" class="range">
+    
+                         <label for="blur" class="label">DESENFOQUE</label>
+                         <input type="range" name="blur" id="blur" maxlength="100" value="0" class="range">
+    
+                         <label for="grayscale" class="label">ESCALA DE GRISES</label>
+                         <input type="range" name="grayscale" id="grayscale" maxlength="100" value="0" class="range">
+    
+                         <label for="sepia" class="label">SEPIA</label>
+                         <input type="range" name="sepia" id="sepia" maxlength="100" value="0" class="range">
+    
+                         <label for="hue" class="label">HUE</label>
+                         <input type="range" name="hue" id="hue" maxlength="100" value="0" class="range">
+    
+                         <label for="saturation" class="label">SATURADO</label>
+                         <input type="range" name="saturation" id="saturation" maxlength="100" value="0" class="range">
+    
+                         <label for="invert" class="label">NEGATIVO</label>
+                         <input type="range" name="invert" id="invert" maxlength="100" value="0" class="range">
+                     </div>
+                   </div>
+                  <button class="refresh-btn">Reestablecer filtros</button>   
+             </section>
+              <!--Fin ASIDE IMAGEN-->
+
+               <!--**********************************
                      ASIDE TEXTO        
-            **********************************-->
-        <aside class="aside text-aside">
-            <div>
-                <h2 class="subtitle">TEXTO</h2>
-            </div>
-            <!--superior texto-->
-            <div>
-                <h3 class="bold-label">SUPERIOR</h3>
-                <textarea name="" id="" class="url-input">TOP TEXT</textarea>
-            </div>
-            <div class="check-flex">
-            <input type="checkbox">
-            <label for="" class="label">Sin texto superior</label>
-            </div>
-            <div>
-                <h3 class="bold-label">INFERIOR</h3>
-                <textarea name="" id="" class="url-input">BOTTOM TEXT</textarea>
-            </div>
-            <div class="check-flex">
-            <input type="checkbox">
-            <label for="" class="label">Sin texto inferior</label>
-            </div>
+                **********************************-->
+             <section class="aside text-aside">
+                  <div>
+                     <h2 class="subtitle">TEXTO</h2>
+                 </div>
+                 <!--superior texto-->
+                  <div>
+                     <h3 class="bold-label">SUPERIOR</h3>
+                     <textarea name="" id="" class="url-input">TOP TEXT</textarea>
+                  </div>
+                 <div class="check-flex">
+                     <input type="checkbox">
+                     <label for="" class="label">Sin texto superior</label>
+                 </div>
+                 <div>
+                     <h3 class="bold-label">INFERIOR</h3>
+                     <textarea name="" id="" class="url-input">BOTTOM TEXT</textarea>
+                 </div>
+                 <div class="check-flex">
+                     <input type="checkbox">
+                     <label for="" class="label">Sin texto inferior</label>
+                 </div>
     
-            <!--fuente texto-->
+                  <!--fuente texto-->
     
-            <div class="font-text">
-                <div class="font-options">
-                    <h3 class="bold-label">FUENTE</h3>
-                    <select class="blend-list" id="font-list">
-                        <option value="Arial">Arial</option>
-                        <option value="Arial Black">Arial Black</option>
-                        <option value="American Typewriter">American Typewriter</option>
-                        <option value="Andale Mono">Andale Mono</option>
-                        <option value="Comic Sans MS">Comic Sans MS</option>
-                        <option value="Helvetica">Helvetica</option>
-                        <option value="Impact">Impact</option>
-                        <option value="Verdana">Verdana</option>
-                        <option value="Times New Roman">Times New Roman</option>
-                    </select>
-                </div>
-                <div class="font-scnd-section">
-                <input type="number" class="number-input" name="Tamaño de fuente" id="" min="12" value="40">
-                <div class="alienation-buttons">
-                    <button><i class="fas fa-align-left"></i></button>
-                    <button><i class="fas fa-align-center"></i></button>
-                    <button><i class="fas fa-align-right"></i></button>
-                </div>
-            </div>
-            <!--COLOR DE TEXTO Y FONDO DE TEXTO-->
-            <div class="aside-container">
-                <div class="wrapper">
-                    <div>
-                        <label class="bold-label">IMAGEN</label>
-                        <div class="color-input-container">
-                            <input type="color" class="color-input" id="color-input" value="#000000">
-                            <span class="span"><div class="circle"></div> #000000</span>
-                        </div>
-                    </div>
-                    <div>
-                        <label class="bold-label">FONDO</label>
-                        <div class="color-input-container">
-                            <input type="color" class="color-input" id="color-input" value="#000000">
-                            <span class="span"><div class="circle"></div> #000000</span>
-                        </div>
-                    </div>
-            </div>
+                 <div class="font-text">
+                      <div class="font-options">
+                          <h3 class="bold-label">FUENTE</h3>
+                          <select class="blend-list" id="font-list">
+                              <option value="Arial">Arial</option>
+                              <option value="Arial Black">Arial Black</option>
+                              <option value="American Typewriter">American Typewriter</option>
+                              <option value="Andale Mono">Andale Mono</option>
+                              <option value="Comic Sans MS">Comic Sans MS</option>
+                              <option value="Helvetica">Helvetica</option>
+                              <option value="Impact">Impact</option>
+                              <option value="Verdana">Verdana</option>
+                              <option value="Times New Roman">Times New Roman</option>
+                         </select>
+                     </div>
+                 <div class="font-scnd-section">
+                     <input type="number" class="number-input" name="Tamaño de fuente" id="" min="12" value="40">
+                       <div class="alienation-buttons">
+                          <button><i class="fas fa-align-left"></i></button>
+                          <button><i class="fas fa-align-center"></i></button>
+                          <button><i class="fas fa-align-right"></i></button>
+                      </div>
+                  </div>
 
-            <!--contorno-->
+                  <!--COLOR DE TEXTO Y FONDO DE TEXTO-->
+                  
+                 <div class="aside-container">
+                      <div class="wrapper">
+                          <div>
+                             <label class="bold-label">IMAGEN</label>
+                              <div class="color-input-container">
+                                  <input type="color" class="color-input" id="color-input" value="#000000">
+                                  <span class="span"><div class="circle"></div> #000000</span>
+                              </div> 
+                          </div>
+                          <div>
+                             <label class="bold-label">FONDO</label>
+                              <div class="color-input-container">
+                                  <input type="color" class="color-input" id="color-input" value="#000000">
+                                  <span class="span"><div class="circle"></div> #000000</span>
+                              </div>
+                         </div>
+                     </div>
+                 </div> 
+                 
 
-            <div>
-                <h3 class="bold-label" >CONTORNO</h3>
-                <div class="contour-buttons">
-                    <button>Ninguno</button>
-                    <button>Claro</button>
-                    <button>Oscuro</button>
-                </div>
-            </div>
-    
-            <!--espaciado-->
-    
-            <div>
-                <h3 class="bold-label">ESPACIADO</h3>
-                <input type="number" class="number-space" min="10" max="50" value="35">
-            </div>
-    
-            <!--interlineado-->
-    
-            <div>
-                <h3 class="bold-label">INTERLINEADO</h3>
-                <select class="blend-list" name="" id="">
-                    <option value="0.8">0.8</option>
-                    <option value="1">1</option>
-                    <option value="1.2">1.2</option>
-                    <option value="1.5">1.5</option>
-                    <option value="2">2</option>
-                    <option value="2.5">2.5</option>
-                </select>
-            </div>
-        </aside>
-        <script src="./main.js"></script>
+                  <!--contorno-->
 
-        
+                 <div>
+                     <h3 class="bold-label" >CONTORNO</h3>
+                       <div class="contour-buttons">
+                          <button>Ninguno</button>
+                          <button>Claro</button>
+                          <button>Oscuro</button>
+                      </div>
+                  </div>
+    
+                 <!--espaciado-->
+    
+                 <div>
+                     <h3 class="bold-label">ESPACIADO</h3>
+                     <input type="number" class="number-space" min="10" max="50" value="35">
+                 </div>
+    
+                  <!--interlineado-->
+    
+                 <div>
+                     <h3 class="bold-label">INTERLINEADO</h3>
+                      <select class="blend-list" name="" id="">
+                         <option value="0.8">0.8</option>
+                         <option value="1">1</option>
+                         <option value="1.2">1.2</option>
+                         <option value="1.5">1.5</option>
+                         <option value="2">2</option>
+                         <option value="2.5">2.5</option>
+                     </select>
+                 </div>
+
+
+                 <!--fin segundo aside-->
+             </section>
+         </aside>
+         <script src="./main.js"></script>
     </body>
     
     </html>
