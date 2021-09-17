@@ -26,3 +26,32 @@ const changeMode = () => {
     // textToggle.textContent = modeStatus.length > 0 ? "Modo Claro" : "Modo Oscuro"
 }
 botonToggle.addEventListener('click', changeMode)
+
+//TOP TEXT Y BOTTOM TEXT // CAMBIO DE FUENTE
+
+const $= (id) => document.getElementById(id)
+
+let cambiarText=()=>{
+    $("toptext").textContent=$("asidetoptext").value
+    $("bottomtext").textContent=$("asidebottomtext").value
+
+}
+
+let cambiarFont=()=>{
+    let font= $("font-list").value
+    $("toptext").style.fontFamily=font
+    $("bottomtext").style.fontFamily=font
+
+}
+
+let comenzarText=() =>{
+    $("asidetoptext").addEventListener("input",cambiarText)
+    $("asidebottomtext").addEventListener("imput", cambiarText)
+    $("font-list").addEventListener("change",cambiarFont)
+
+}
+
+const inicializar=()=>{
+    comenzarText()
+}
+window.onload=inicializar
