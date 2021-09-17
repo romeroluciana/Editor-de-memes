@@ -27,15 +27,17 @@ const changeMode = () => {
 }
 botonToggle.addEventListener('click', changeMode)
 
-//TOP TEXT Y BOTTOM TEXT // CAMBIO DE FUENTE
+// TOP TEXT Y BOTTOM TEXT // CAMBIO DE FUENTE
 
 const $= (id) => document.getElementById(id)
+// Aca guardamos todos los id
 
 let cambiarText=()=>{
     $("toptext").textContent=$("asidetoptext").value
     $("bottomtext").textContent=$("asidebottomtext").value
 
 }
+// Aca reemplazamos el contenido de las etiquetas p por el valor ingresado en las textarea
 
 let cambiarFont=()=>{
     let font= $("font-list").value
@@ -43,6 +45,7 @@ let cambiarFont=()=>{
     $("bottomtext").style.fontFamily=font
 
 }
+// Reemplazamos la fuente de las etiquetas p por la opcion elegida en el select
 
 let comenzarText=() =>{
     $("asidetoptext").addEventListener("input",cambiarText)
@@ -50,8 +53,12 @@ let comenzarText=() =>{
     $("font-list").addEventListener("change",cambiarFont)
 
 }
+// Agregamos los addEventListener a las funciones 
+// input = nuevo evento input => se ejecuta lo ingresado en el input
+// change = nuevo evento change => se ejecuta lo ingresado en el select
 
 const inicializar=()=>{
     comenzarText()
 }
 window.onload=inicializar
+// Aca inicializamos las funciones
