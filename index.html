@@ -49,7 +49,7 @@
                 **********************************-->
             <main class="main">
                 <section class="meme-container">
-                    <div class="text-container">
+                    <div class="text-container"  id="text-container">
                         <p id="toptext" class="meme-text top">
                             TOP TEXT
                         </p>
@@ -57,16 +57,16 @@
                     <div class="img-container">
                         <img src="" class="meme-img">
                     </div>
-                    <div class="text-container">
+                    <div class="text-container" id="text-containerdos">
                         <p id="bottomtext" class="meme-text bottom">
                             BOTTOM TEXT
                         </p>
                     </div>
                 </section>
-                <button class="download-btn">
+                <div class="text-box">
+                    <a href="#" class="btn btn-white btn-animate">Descargar meme</a>
                     <i class="fas fa-download btn-icon"></i>
-                    <p>Descargar meme</p>
-                </button>
+                </div>
             </main>
             <!--Fin Main-->
 
@@ -83,7 +83,7 @@
                      <label class="bold-label">FONDO</label>
                      <div class="wrapper">
                           <div class="color-input-container">
-                             <input type="color" class="color-input" id="color-input" value="#000000">
+                             <input type="color" class="color-input" id="color-input-img" value="#000000">
                              <span class="span"><div class="circle"></div> #000000</span>
                           </div>
                           <div class="select-blemd">
@@ -189,17 +189,17 @@
                  <div class="aside-container">
                       <div class="wrapper">
                           <div>
-                             <label class="bold-label">IMAGEN</label>
+                             <label class="bold-label">COLOR</label>
                               <div class="color-input-container">
-                                  <input type="color" class="color-input" id="color-input" value="#000000">
-                                  <span class="span"><div class="circle"></div> #000000</span>
+                                  <input type="color" class="color-input" id="color-input-txt">
+                                  <span class="span"><div class="circle" id="circle-c"></div> #000000</span>
                               </div> 
                           </div>
                           <div>
                              <label class="bold-label">FONDO</label>
                               <div class="color-input-container">
-                                  <input type="color" class="color-input" id="color-input" value="#000000">
-                                  <span class="span"><div class="circle"></div> #000000</span>
+                                  <input type="color" class="color-input" id="color-input-f">
+                                  <span class="span"><div class="circle" id="circle-f"></div> #000000</span>
                               </div>
                          </div>
                      </div>
