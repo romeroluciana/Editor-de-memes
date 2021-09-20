@@ -49,7 +49,7 @@ let cambiarFont=()=>{
 
 let comenzarText=() =>{
     $("asidetoptext").addEventListener("input",cambiarText)
-    $("asidebottomtext").addEventListener("imput", cambiarText)
+    $("asidebottomtext").addEventListener("input", cambiarText)
     $("font-list").addEventListener("change",cambiarFont)
 
 }
