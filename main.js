@@ -3,6 +3,8 @@ const body = document.querySelector('body')
 const botonToggle = document.getElementById('toggle-mode-button')
 const iconToggle = document.getElementById('icon-toggle-mode')
 const textToggle = document.getElementById('text-toggle')
+const imageToggle = document.getElementById('toggle-image-button')
+const textAsideToggle = document.getElementById('toggle-texto-button')
 
 const changeMode = () => {
     /*se hace toggle de todas las clases que necesitamos cambiar*/
@@ -26,6 +28,26 @@ const changeMode = () => {
     textToggle.textContent = modeStatus.length > 0 ? "Modo Claro" : "Modo Oscuro"*/
 }
 botonToggle.addEventListener('click', changeMode)
+
+const chageToImage = () => {
+    let sectionImagen = document.getElementById('section-imagen')
+    sectionImagen.classList.remove('oculto')
+
+    let sectionTexto = document.getElementById('section-texto')
+    sectionTexto.classList.add('oculto')
+}
+
+imageToggle.addEventListener('click' , chageToImage) 
+
+const changeToText = () => {
+
+    let sectionTexto = document.getElementById('section-texto')
+    sectionTexto.classList.remove('oculto')
+
+    let sectionImagen = document.getElementById('section-image')
+    sectionImagen.classList.add('oculto')
+}
+textAsideToggle.addEventListener('click' , changeToText)
 
 
 
@@ -121,4 +143,5 @@ const inicializar=()=>{
     iniciarImage()
 }
 window.onload=inicializar
+
 // Aca inicializamos las funciones

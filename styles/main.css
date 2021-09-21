@@ -15,6 +15,13 @@
     flex-direction: column;
     margin-bottom: 15px;
 }
+.meme-img{
+    width:100%;
+    max-width: 500px;
+    height: 100%;
+    object-fit: cover;
+}
+
 .text-container{
     background: #ffffff;
     font-family: 'impact';

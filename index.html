@@ -29,11 +29,11 @@
             <header class="header">
                 <h1 class="title">Generador de Memes</h1>
                 <nav class="nav">
-                    <button class="header-btn" aria-label="Filtros de imagen">
+                    <button class="header-btn" id="toggle-image-button" aria-label="Filtros de imagen">
                         <i class="fas fa-file-image btn-icon" aria-hidden="true"></i>
                         <p>Imagen</p>
                     </button>
-                    <button class="header-btn" aria-label="Filtros de texto">
+                    <button class="header-btn" id="toggle-texto-button" aria-label="Filtros de texto">
                         <i class="fas fa-font btn-icon" aria-hidden="true"></i>
                         <p>Texto</p>
                     </button>
@@ -74,7 +74,7 @@
                        ASIDE          
                 **********************************-->
          <aside>
-             <section class="aside"><h2 class="subtitle">IMAGEN</h2>
+             <section id="section-imagen" class="aside"><h2 class="subtitle">IMAGEN</h2>
                   <div class="aside-container">
                       <label for="url-input" class="bold-label">URL</label>
                       <input type="url" id="url_input" class="url-input">
@@ -136,7 +136,7 @@
                <!--**********************************
                      ASIDE TEXTO        
                 **********************************-->
-             <section class="aside text-aside oculto">
+             <section id="section-texto" class="aside text-aside oculto">
                   <div>
                      <h2 class="subtitle">TEXTO</h2>
                  </div>
