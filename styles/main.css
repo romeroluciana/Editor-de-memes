@@ -33,3 +33,7 @@
 .download-btn{
     background-color: var(--input-color);
 }
+
+.oculto {
+    display: none;
+  }
