@@ -1,3 +1,8 @@
+
+/////////////////
+//// HEADER /////
+/////////////////
+
 // MODO CLARO-OSCURO
 const body = document.querySelector('body')
 const botonToggle = document.getElementById('toggle-mode-button')
@@ -111,8 +116,8 @@ de fontSize escribiremos color y backgroundColor. El evento utilizado es input. 
 
 
 
-  //////////////////
- // ASIDE IMAGEN //
+//////////////////
+// ASIDE IMAGEN //
 //////////////////
 
 //INPUT IMAGEN POR URL
