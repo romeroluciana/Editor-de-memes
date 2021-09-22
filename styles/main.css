@@ -37,10 +37,59 @@
     background: var(--selected-color);
 }
 
-.download-btn{
+.download-btn {
+    outline: 0;
+    outline: none;
+    border: transparent;
+    border-radius: 3px;
+    flex-direction: row;
+    align-items: center;
+    transition: all 0.2s;
+    position: relative;
+}
+.download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.383);
+}
+.download-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.342), 0.2;
+}
+.download-btn {
     background-color: var(--input-color);
 }
-
+.btn::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+}
+.btn-white::after {
+    background-color: rgb(109, 81, 144);
+}
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+.btn-animated {
+    animation: movimientoBoton 4s ease-out;
+    animation-fill-mode: backwards;
+}
+@keyframes movimientoBoton {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+   }
+    100% {
+        opacity: 2;
+        transform: translateY(0px);
+   }
+}
 .oculto {
     display: none;
   }
