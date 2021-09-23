@@ -82,14 +82,32 @@ let cambiarFont=()=>{
 }
 /* Reemplazamos la fuente de las etiquetas p por la opcion elegida en el select */
 
-let comenzarText=() =>{
+
+const botoncheck = () => {
+    if ($('checksuperior').checked) {
+      $('text-container').classList.add('none')
+    } else {
+      $('text-container').classList.remove('none')
+    }
+  
+    if ($('checkinferior').checked) {
+      $('text-containerdos').classList.add('none')
+    } else {
+      $('text-containerdos').classList.remove('none')
+    }
+  }
+
+  let comenzarText= () =>{
     $("asidetoptext").addEventListener("input",cambiarText)
     $("asidebottomtext").addEventListener("input", cambiarText)
     $("font-list").addEventListener("change",cambiarFont)
+    $("checksuperior").addEventListener("click", botoncheck) 
+    $("checkinferior").addEventListener("click", botoncheck) 
 }
 /* Agregamos los addEventListener a las funciones 
 input = nuevo evento input => se ejecuta lo ingresado en el input
 change = nuevo evento change => se ejecuta lo ingresado en el select */
+
 
 //CAMBIO COLORES
 
