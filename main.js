@@ -94,14 +94,18 @@ change = nuevo evento change => se ejecuta lo ingresado en el select */
 //CAMBIO COLORES
 
 let actualizarColores=()=>{
-    let colorf= $("color-input-f").value
+    let colorf= $("color-input-f").value.toUpperCase()
     $("text-container").style.backgroundColor=colorf
     $("text-containerdos").style.backgroundColor=colorf
-    let colortxt = $("color-input-txt").value
+    $("circle-f").style.backgroundColor=colorf
+    $("span-f").textContent= colorf
+
+    let colortxt = $("color-input-txt").value.toUpperCase()
     $("toptext").style.color=colortxt
     $("bottomtext").style.color=colortxt
-    $("circle-f").style.backgroundColor=colorf
     $("circle-c").style.backgroundColor=colortxt
+    $("span-txt").textContent= colortxt
+    
 }
 
 let inicializarColores=()=>{
