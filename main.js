@@ -123,12 +123,27 @@ let actualizarColores=()=>{
     $("bottomtext").style.color=colortxt
     $("circle-c").style.backgroundColor=colortxt
     $("span-txt").textContent= colortxt
-    
+
+    let colorimg = $("color-input-img").value.toUpperCase()
+    $("imagen").style.backgroundColor= colorimg
+    $("circleimg").style.backgroundColor= colorimg
+    $("circletext").textContent= colorimg
+
+}
+
+let colorImg=()=>{
+    let colorimg = $("color-input-img").value.toUpperCase()
+    $("imagen").style.backgroundColor= colorimg
+    $("circleimg").style.backgroundColor= colorimg
+    $("circletext").textContent= colorimg
 }
 
 let inicializarColores=()=>{
     $("color-input-f").addEventListener("input", actualizarColores)
     $("color-input-txt").addEventListener("input", actualizarColores)
+}
+let inicializarImg=()=>{
+    $("color-input-img").addEventListener("input",colorImg)
 }
 /*Realizamos el mismo procedimiento que en el cambio de fuente, excepto que en lugar
 de fontSize escribiremos color y backgroundColor. El evento utilizado es input. */
@@ -168,6 +183,7 @@ const inicializar=()=>{
     comenzarText()
     inicializarColores()
     iniciarImage()
+    inicializarImg()
 }
 window.onload=inicializar
 
