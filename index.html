@@ -55,7 +55,7 @@
                         </p>
                     </div>
                     <div class="img-container">
-                        <img src="" class="meme-img" id ="imagen">
+                        <img src="https://lorempixel.com/400/400/cats/" class="meme-img" id ="meme-img imagen">
                     </div>
                     <div class="text-container" id="text-containerdos">
                         <p id="bottomtext" class="meme-text bottom">
@@ -102,31 +102,31 @@
                      <label class="bold-label">FILTROS</label>
                      <div class="filter-container">
                          <label for="brightness" class="label">BRILLO</label>
-                         <input type="range" name="brightness" id="brightness" maxlength="100" value="100" class="range">
+                         <input type="range" name="brightness" id="brightness" max="1" min="0" value="1" step="0.01" class="range">
     
                          <label for="opacity" class="label">OPACIDAD</label>
-                         <input type="range" name="opacity" id="opacity" maxlength="100" value="100" class="range">
+                         <input type="range" name="opacity" id="opacity" max="1" min="0" value="1" step="0.01" class="range">
     
                          <label for="contrast" class="label">CONTRASTE</label>
-                         <input type="range" name="contrast" id="contrast" maxlength="100" value="0" class="range">
+                         <input type="range" name="contrast" id="contrast" max="1000" min="100" value="100" class="range">
     
                          <label for="blur" class="label">DESENFOQUE</label>
-                         <input type="range" name="blur" id="blur" maxlength="100" value="0" class="range">
+                         <input type="range" name="blur" id="blur" max="10" min="0" value="0" step="0.1" class="range">
     
                          <label for="grayscale" class="label">ESCALA DE GRISES</label>
-                         <input type="range" name="grayscale" id="grayscale" maxlength="100" value="0" class="range">
+                         <input type="range" name="grayscale" id="grayscale" max="100" min="0" value="0" class="range">
     
                          <label for="sepia" class="label">SEPIA</label>
-                         <input type="range" name="sepia" id="sepia" maxlength="100" value="0" class="range">
+                         <input type="range" name="sepia" id="sepia" max="100" min="0" value="0" class="range">
     
                          <label for="hue" class="label">HUE</label>
-                         <input type="range" name="hue" id="hue" maxlength="100" value="0" class="range">
+                         <input type="range" name="hue" id="hue" max="360" min="0" value="0" class="range">
     
                          <label for="saturation" class="label">SATURADO</label>
-                         <input type="range" name="saturation" id="saturation" maxlength="100" value="0" class="range">
+                         <input type="range" name="saturation" id="saturation" max="1000" min="100" value="100" class="range">
     
                          <label for="invert" class="label">NEGATIVO</label>
-                         <input type="range" name="invert" id="invert" maxlength="100" value="0" class="range">
+                         <input type="range" name="invert" id="invert" max="1" min="0" value="0" step="0.01" class="range">
                      </div>
                    </div>
                   <button class="refresh-btn">Reestablecer filtros</button>   
@@ -220,7 +220,8 @@
                  <!--fin segundo aside-->
              </section>
          </aside>
-         <script src="./main.js"></script>
+         <script src="/filtros.js"></script>
+         <script src="/main.js"></script>
     </body>
     
     </html>
