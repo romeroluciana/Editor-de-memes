@@ -1,11 +1,11 @@
 .title{
-    font-size: 36px;
-    margin: 10px;
+    font-size: 1.9rem;
+    margin: 0.5em;
 }
 .nav{
     display: flex;
     flex-direction: row;
-    margin-bottom: 5px;
+    margin-bottom: 0.3em;
 }
 .header-btn{
     background-color: var(--input-color);
@@ -14,7 +14,7 @@
     background-color: var(--input-focus-color);
 }
 .btn-icon{
-    font-size: 14px;
+    font-size: 0.8rem;
     margin-right: 0.35em;
 }
 .header-button {
