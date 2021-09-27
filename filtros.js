@@ -14,14 +14,14 @@ const unidades = ['', '', '%', 'px', '%', '%', 'deg', '%', ''];
 const txtFiltro = ['brightness', 'opacity', 'contrast', 'blur', 'grayscale', 'sepia', 'hue-rotate', 'saturate', 'invert'];
 const filtros = [brightnessRange, opacityRange, contrastRange, blurRange, grayscaleRange, sepiaRange, hueRange, saturationRange, invertRange];
 
-const change = () =>{
+const change = () => {
     memeImg.style.filter = '';
     for (let i = 0; i < filtros.length; i++) {
         memeImg.style.filter += `${txtFiltro[i]}(${filtros[i].value}${unidades[i]})`;
     }
 }
 
-const valoresIniciales = () =>{
+const valoresIniciales = () => {
     for (let i = 0; i < filtros.length; i++) {
         filtros[i].value = arrayIniciales[i];
         change();
@@ -29,11 +29,11 @@ const valoresIniciales = () =>{
 }
 
 for (let j = 0; j < filtros.length; j++) {
-    filtros[j].addEventListener('input',()=>{
+    filtros[j].addEventListener('input', () => {
         change();
-    });  
+    });
 }
-btnRestablecer.addEventListener('click',()=>{
+btnRestablecer.addEventListener('click', () => {
     valoresIniciales();
     change();
 });
