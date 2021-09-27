@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
+    
 }
 .meme-img{
     width:100%;
@@ -46,6 +47,44 @@
     align-items: center;
     transition: all 0.2s;
     position: relative;
+}
+@media(max-width: 700px) {
+    .main{
+        align-items: flex-start;
+    }
+    .meme-container{
+        width: 100%;
+        max-width: 800px;
+    }
+    .img-container{
+        width: 100%;
+        max-width: 800px;
+    }
+    .meme-img{
+        width: 100%;
+        max-width: 800px;
+    }
+
+}
+@media(max-width: 992px){
+    .main{
+        align-items: flex-start;
+    }
+    .meme-container{
+        width: 100%;
+        
+    }
+    .img-container{
+        width: 100%;
+        
+    }
+    .meme-img{
+        width: 100%;
+        
+    }
+    .aside{
+        
+    }
 }
 .download-btn:hover {
     transform: translateY(-3px);
