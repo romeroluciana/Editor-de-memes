@@ -163,15 +163,12 @@ de fontSize escribiremos color y backgroundColor. El evento utilizado es input. 
 
 /*Se declara la función que vinculará el link de la imegen ingresada en el input URL a la etiqueta img*/
 
-let imageChange = () => {
-    let urlImagen = document.getElementById("url_input");
-    let imagen = document.getElementById("imagen");
-    imagen.src = urlImagen.value;
-    }
+const imagen = document.getElementById("meme-img");
+const urlImagen = document.getElementById("url_input");
 
-let iniciarImage = () => {
-    $('url_input').addEventListener('input', imageChange);
-    }
+urlImagen.oninput = () => {
+    imagen.style.backgroundImage = `url("${urlImagen.value}")`
+}
 
     
 
@@ -182,7 +179,6 @@ let iniciarImage = () => {
 const inicializar=()=>{
     comenzarText()
     inicializarColores()
-    iniciarImage()
     inicializarImg()
 }
 window.onload=inicializar
