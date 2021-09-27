@@ -10,30 +10,38 @@
 }
 .meme-container{
     width:100%;
-    max-width: 500px;
+    max-width: 32em;
+    height: 29.3em;
+    max-height: 32em;
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    margin-bottom: 0.94em;
 }
 .meme-img{
     width:100%;
-    max-width: 500px;
     height: 100%;
-    object-fit: cover;
+    max-width: 32em;
+    max-height: 32em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: cover;
+    background-size: cover;
+    overflow: hidden;
 }
 
 .text-container{
     background: #ffffff;
     font-family: 'impact';
+    font-stretch: expanded;
     color: #000000;
     font-weight: 600;
-    font-size: 38px;
-    padding: 10px;
+    font-size: 2.37rem;
+    padding: 0.25em;
     text-align: center;
 }
 .img-container{
-    height: 50vh;
-    max-height: 450px;
+    height: 100%;
+    max-height: 32em;
     background: var(--selected-color);
 }
 
@@ -41,19 +49,19 @@
     outline: 0;
     outline: none;
     border: transparent;
-    border-radius: 3px;
+    border-radius: 0.36em;
     flex-direction: row;
     align-items: center;
     transition: all 0.2s;
     position: relative;
 }
 .download-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.383);
+    transform: translateY(-0.18em);
+    box-shadow: 0 0.32em 0.63em rgba(0, 0, 0, 0.383);
 }
 .download-btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.342), 0.2;
+    transform: translateY(-0.06em);
+    box-shadow: 0 0.16em 0.32em rgba(0, 0, 0, 0.342), 0.2;
 }
 .download-btn {
     background-color: var(--input-color);
@@ -62,7 +70,7 @@
     content: "";
     height: 100%;
     width: 100%;
-    border-radius: 3px;
+    border-radius: 0.36em;
     position: absolute;
     top: 0;
     left: 0;
@@ -83,11 +91,11 @@
 @keyframes movimientoBoton {
     0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(1.88em);
    }
     100% {
         opacity: 2;
-        transform: translateY(0px);
+        transform: translateY(0);
    }
 }
 .oculto {
