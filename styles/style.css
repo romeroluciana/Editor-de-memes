@@ -44,11 +44,11 @@ button {
   color: var(--text-color);
   background-color: var(--input-color);
   align-items: center;
-  border-radius: 3px;
-  margin: 2.5px;
-  height:35px;
-  padding: 0 10px;
-  font-size: 14px;
+  border-radius: 0.36em;
+  margin: 0.16em;
+  height: 2.725em;
+  padding: 0 0.63em;
+  font-size: 0.875rem;
   cursor: pointer;
 }
 body {
@@ -76,9 +76,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 .aside {
-  width: 260px;
+  width: 16.25em;
   height: 100vh;
   display: flex;
   position: absolute;
@@ -89,6 +90,6 @@ body {
 }
 @media screen and (max-width: 700px){
   .header .title{
-    font-size: 26px;
+    font-size: 1.63rem;
   }
 } 
