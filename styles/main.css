@@ -5,20 +5,22 @@
     font-weight: normal;
     font-style: normal;
 }
-.main{ 
+.main{
     padding: 1em;
 }
 .meme-container{
     width:100%;
     max-width: 500px;
-    display: flex;
+    
     flex-direction: column;
     margin-bottom: 15px;
 }
 .meme-img{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
     width: 100%;
-    background-size: cover;
-    flex-grow: 1;
 }
 
 .text-container{
@@ -34,7 +36,6 @@
     height: 50vh;
     max-height: 450px;
     background: var(--selected-color);
-    display: flex;
 }
 
 .download-btn {
