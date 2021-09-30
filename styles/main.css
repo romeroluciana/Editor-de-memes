@@ -5,7 +5,7 @@
     font-weight: normal;
     font-style: normal;
 }
-.main{
+.main{ 
     padding: 1em;
 }
 .meme-container{
@@ -16,10 +16,9 @@
     margin-bottom: 15px;
 }
 .meme-img{
-    width:100%;
-    max-width: 500px;
-    height: 100%;
-    object-fit: cover;
+    width: 100%;
+    background-size: cover;
+    flex-grow: 1;
 }
 
 .text-container{
@@ -35,6 +34,7 @@
     height: 50vh;
     max-height: 450px;
     background: var(--selected-color);
+    display: flex;
 }
 
 .download-btn {
