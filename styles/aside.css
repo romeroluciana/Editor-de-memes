@@ -171,6 +171,14 @@ input[type='color']{
   align-self: flex-start;
   margin-top: 10px;
 }
+.close-aside {
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  font-size: 20px;
+  float: right;
+  margin: 0 90%;
+}
 
 @media screen and (max-width: 992px) {
   .aside {

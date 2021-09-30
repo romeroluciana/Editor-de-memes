@@ -52,14 +52,14 @@
                             MAIN             
                 **********************************-->
     <main class="main">
-        <section class="meme-container">
+        <section class="meme-container" id="meme-composer">
             <div class="text-container" id="text-container">
                 <p id="toptext" class="meme-text top">
                     TOP TEXT
                 </p>
             </div>
             <div class="img-container">
-                <img src="" class="meme-img" id="meme-img imagen">
+                <div class="meme-img" id="meme-img"> </div>
             </div>
             <div class="text-container" id="text-containerdos">
                 <p id="bottomtext" class="meme-text bottom">
@@ -67,7 +67,7 @@
                 </p>
             </div>
         </section>
-        <button class="download-btn">
+        <button class="download-btn" onclick="descargarImagen()">
             <i class="fas fa-download btn-icon"></i>
             <p class="btn btn-white btn-animate">Descargar meme</p>
         </button>
@@ -78,7 +78,11 @@
                        ASIDE          
                 **********************************-->
     <aside>
-        <section id="section-imagen" class="aside">
+        <section id="section-imagen" class="aside" >
+            <!--Agregado el boton para cerrar el aside ver funcion en main.js y estilos en aside.css-->
+            <button class="close-aside" onclick="hideAside('section-imagen')">
+                X
+            </button>
             <h2 class="subtitle">IMAGEN</h2>
             <div class="aside-container">
                 <label for="url-input" class="bold-label">URL</label>
@@ -147,6 +151,9 @@
                      ASIDE TEXTO        
                 **********************************-->
         <section id="section-texto" class="aside text-aside oculto">
+            <button class="close-aside" onclick="hideAside('section-texto')">
+                X
+            </button>
             <div>
                 <h2 class="subtitle">TEXTO</h2>
             </div>
@@ -236,6 +243,8 @@
                 <!--fin segundo aside-->
         </section>
     </aside>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="filtros.js"></script>
     <script src="main.js"></script>
 </body>

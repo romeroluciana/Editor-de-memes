@@ -11,6 +11,12 @@ const textToggle = document.getElementById('text-toggle')
 const imageToggle = document.getElementById('toggle-image-button')
 const textAsideToggle = document.getElementById('toggle-texto-button')
 
+const descargarImagen = () => {
+    domtoimage.toBlob($('meme-composer')).then(function (blob) {
+      saveAs(blob, 'meme.png')
+    })
+}
+
 const changeMode = () => {
     body.classList.toggle('dark-mode')
     body.classList.toggle('light-mode')
@@ -65,6 +71,8 @@ let cambiarFont = () => {
     $("bottomtext").style.fontFamily = font
 
 }
+
+
 
 
 const botoncheck = () => {
@@ -136,17 +144,27 @@ let inicializarImg = () => {
 //////////////////
 
 //INPUT IMAGEN POR URL
-
-let imageChange = () => {
-    let urlImagen = document.getElementById("url_input");
+// se le pasa un evento que va a ser la url del input.  se verifica que haya algun valor antes de intentar asignar el background
+// se cambió el tag <img por un div dado que sino iban a necesitar un fallback image para resolver el hecho de que si no hay
+// imagen se muestra un iconito de imagen rota.
+let imageChange = (evento) => {
+    /*let urlImagen = document.getElementById("url_input");
     let imagen = document.getElementById("imagen");
     imagen.src = urlImagen.value;
+    */
+    if (evento.target.value.length !== 0) {
+        $('meme-img').style.backgroundImage = `url("${evento.target.value}")`
+    }
 }
 
 let iniciarImage = () => {
     $('url_input').addEventListener('input', imageChange);
 }
 
+// Se le pasa el target (section-imagen o section-text) y se le agrega la clase 'oculto'
+const hideAside = (target) => {
+    $(target).classList.add('oculto')
+}
 
 
 /////////////////////////
