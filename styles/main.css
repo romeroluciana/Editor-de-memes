@@ -48,44 +48,7 @@
     transition: all 0.2s;
     position: relative;
 }
-@media(max-width: 700px) {
-    .main{
-        align-items: flex-start;
-    }
-    .meme-container{
-        width: 100%;
-        max-width: 800px;
-    }
-    .img-container{
-        width: 100%;
-        max-width: 800px;
-    }
-    .meme-img{
-        width: 100%;
-        max-width: 800px;
-    }
 
-}
-@media(max-width: 992px){
-    .main{
-        align-items: flex-start;
-    }
-    .meme-container{
-        width: 100%;
-        
-    }
-    .img-container{
-        width: 100%;
-        
-    }
-    .meme-img{
-        width: 100%;
-        
-    }
-    .aside{
-        
-    }
-}
 .download-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.383);
@@ -132,3 +95,60 @@
 .oculto {
     display: none;
   }
+  @media(max-width: 576px) {
+    .main{
+        align-items: flex-start;
+        
+    }
+    .meme-container{
+        width: 100%;
+        max-width: 800px;
+        
+      
+    }
+    .img-container{
+        width: 100%;
+        max-width: 800px;
+    }
+    .meme-img{
+        width: 100%;
+        max-width: 800px;
+    }
+    .download-btn{
+        margin-top: 10px;
+        margin-left: 170px;
+    }
+    .aside{
+        display: none;
+    }
+
+}
+@media(max-width: 992px){
+    .main{
+        align-items: flex-start;
+        margin-left: 10%;
+        margin-top: 35px;
+
+    }
+    .meme-container{
+        width: 100%;
+        
+    }
+    .img-container{
+        width: 100%;
+        
+    }
+    .meme-img{
+        width: 100%;
+        
+    }
+    .download-btn{
+        margin-top: 10px;
+        margin-left: 170px;
+    }
+}
+@media(max-width: 950px) {
+    .aside{
+        display: none;
+    }
+}
