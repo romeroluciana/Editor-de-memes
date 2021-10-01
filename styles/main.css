@@ -141,7 +141,8 @@
     }
     .download-btn{
         margin-top: 10px;
-        margin-right: auto
+        margin-right: auto;
+        margin-left: auto;
     }
     .aside{
         width: 100%;
