@@ -94,35 +94,8 @@
 }
 .oculto {
     display: none;
-  }
-  @media(max-width: 576px) {
-    .main{
-        align-items: flex-start;
-        
-    }
-    .meme-container{
-        width: 100%;
-        max-width: 800px;
-        
-      
-    }
-    .img-container{
-        width: 100%;
-        max-width: 800px;
-    }
-    .meme-img{
-        width: 100%;
-        max-width: 800px;
-    }
-    .download-btn{
-        margin-top: 10px;
-        margin-left: 170px;
-    }
-    .aside{
-        display: none;
-    }
-
 }
+ 
 @media(max-width: 992px){
     .main{
         align-items: flex-start;
@@ -148,7 +121,35 @@
     }
 }
 @media(max-width: 950px) {
-    .aside{
+    aside{
         display: none;
     }
+}
+@media(max-width: 576px) {
+    .main{
+        align-items: center;
+        margin-left: 1%;
+    }
+    .meme-container{
+        width: 100%;
+        max-width: 800px;
+        
+      
+    }
+    .img-container{
+        width: 100%;
+        max-width: 800px;
+    }
+    .meme-img{
+        width: 100%;
+        max-width: 800px;
+    }
+    .download-btn{
+        margin-top: 10px;
+        margin-left: 170px;
+    }
+    aside{
+        display: none;
+    }
+
 }
