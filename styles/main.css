@@ -11,16 +11,17 @@
 .meme-container{
     width:100%;
     max-width: 500px;
-    display: flex;
+    
     flex-direction: column;
     margin-bottom: 15px;
     
 }
 .meme-img{
-    width:100%;
-    max-width: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     height: 100%;
-    object-fit: cover;
+    width: 100%;
 }
 
 .text-container{
@@ -120,11 +121,7 @@
         margin-left: 170px;
     }
 }
-@media(max-width: 950px) {
-    aside{
-        display: none;
-    }
-}
+
 @media(max-width: 576px) {
     .main{
         align-items: center;
@@ -133,8 +130,6 @@
     .meme-container{
         width: 100%;
         max-width: 800px;
-        
-      
     }
     .img-container{
         width: 100%;
@@ -146,7 +141,10 @@
     }
     .download-btn{
         margin-top: 10px;
-        margin-left: 170px;
+        
+    }
+    .aside{
+        width: 100%;
     }
     aside{
         display: none;

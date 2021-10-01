@@ -11,26 +11,19 @@ const textToggle = document.getElementById('text-toggle')
 const imageToggle = document.getElementById('toggle-image-button')
 const textAsideToggle = document.getElementById('toggle-texto-button')
 
+const descargarImagen = () => {
+    domtoimage.toBlob($('meme-composer')).then(function (blob) {
+      saveAs(blob, 'meme.png')
+    })
+}
+
 const changeMode = () => {
-    /*se hace toggle de todas las clases que necesitamos cambiar*/
     body.classList.toggle('dark-mode')
     body.classList.toggle('light-mode')
     iconToggle.classList.toggle('far')
     iconToggle.classList.toggle('fas')
-    /*chequeamos con modeStatus si el estado es dark o light. Si hay un dark-mode, 
-     esta en modo dark, de lo contrario es light */
     const modeStatus = document.getElementsByClassName('dark-mode');
-    /*Si el modo es DARK vamos a pasar a modo claro*/
-    if (modeStatus.length > 0) {  /*AQUI NOS FIJAMOS CUANTOS ELEMENTOS se obtuvieron con getELementsByClassName*/
-       console.log("ESTA EN DARK MODE");
-       textToggle.textContent = "Modo claro"
-    /* Si el modo es LIGHT vamos a pasar a modo oscuro */
-    } else {
-        console.log("Esta en light mode")
-        textToggle.textContent = "Modo oscuro"
-    }
-    /* OPCIONAL DESCOMENTAMOS ESTA LINEA Y TENEMOS UN SHORTCUT PARA EL IF 
-    textToggle.textContent = modeStatus.length > 0 ? "Modo Claro" : "Modo Oscuro"*/
+    textToggle.textContent = modeStatus.length > 0 ? "Modo Claro" : "Modo Oscuro"
 }
 botonToggle.addEventListener('click', changeMode)
 
@@ -39,13 +32,14 @@ const chageToImage = () => {
     sectionImagen.classList.remove('oculto')
 
     let aside = document.getElementById('aside')
+    console.log(aside)
     aside.style.display='block'
 
     let sectionTexto = document.getElementById('section-texto')
     sectionTexto.classList.add('oculto')
 }
 
-imageToggle.addEventListener('click' , chageToImage) 
+imageToggle.addEventListener('click', chageToImage)
 
 const changeToText = () => {
 
@@ -55,10 +49,10 @@ const changeToText = () => {
     let aside = document.getElementById('aside')
     aside.style.display='block'
 
-    let sectionImagen = document.getElementById('section-image')
+    let sectionImagen = document.getElementById('section-imagen')
     sectionImagen.classList.add('oculto')
 }
-textAsideToggle.addEventListener('click' , changeToText)
+textAsideToggle.addEventListener('click', changeToText)
 
 
 
@@ -70,89 +64,82 @@ textAsideToggle.addEventListener('click' , changeToText)
 // TOP TEXT Y BOTTOM TEXT
 // CAMBIO DE FUENTE
 
-const $= (id) => document.getElementById(id)
-/* Aca guardamos todos los id */
+const $ = (id) => document.getElementById(id)
 
-let cambiarText=()=>{
-    $("toptext").textContent=$("asidetoptext").value
-    $("bottomtext").textContent=$("asidebottomtext").value
-
-}
-/* Aca reemplazamos el contenido de las etiquetas p por el valor ingresado en las textarea */
-
-let cambiarFont=()=>{
-    let font= $("font-list").value
-    $("toptext").style.fontFamily=font
-    $("bottomtext").style.fontFamily=font
+let cambiarText = () => {
+    $("toptext").textContent = $("asidetoptext").value
+    $("bottomtext").textContent = $("asidebottomtext").value
 
 }
-/* Reemplazamos la fuente de las etiquetas p por la opcion elegida en el select */
+
+let cambiarFont = () => {
+    let font = $("font-list").value
+    $("toptext").style.fontFamily = font
+    $("bottomtext").style.fontFamily = font
+
+}
+
+
 
 
 const botoncheck = () => {
     if ($('checksuperior').checked) {
-      $('text-container').classList.add('none')
+        $('text-container').classList.add('none')
     } else {
-      $('text-container').classList.remove('none')
+        $('text-container').classList.remove('none')
     }
-  
+
     if ($('checkinferior').checked) {
-      $('text-containerdos').classList.add('none')
+        $('text-containerdos').classList.add('none')
     } else {
-      $('text-containerdos').classList.remove('none')
+        $('text-containerdos').classList.remove('none')
     }
-  }
-
-  let comenzarText= () =>{
-    $("asidetoptext").addEventListener("input",cambiarText)
-    $("asidebottomtext").addEventListener("input", cambiarText)
-    $("font-list").addEventListener("change",cambiarFont)
-    $("checksuperior").addEventListener("click", botoncheck) 
-    $("checkinferior").addEventListener("click", botoncheck) 
 }
-/* Agregamos los addEventListener a las funciones 
-input = nuevo evento input => se ejecuta lo ingresado en el input
-change = nuevo evento change => se ejecuta lo ingresado en el select */
 
+let comenzarText = () => {
+    $("asidetoptext").addEventListener("input", cambiarText)
+    $("asidebottomtext").addEventListener("input", cambiarText)
+    $("font-list").addEventListener("change", cambiarFont)
+    $("checksuperior").addEventListener("click", botoncheck)
+    $("checkinferior").addEventListener("click", botoncheck)
+}
 
 //CAMBIO COLORES
 
-let actualizarColores=()=>{
-    let colorf= $("color-input-f").value.toUpperCase()
-    $("text-container").style.backgroundColor=colorf
-    $("text-containerdos").style.backgroundColor=colorf
-    $("circle-f").style.backgroundColor=colorf
-    $("span-f").textContent= colorf
+let actualizarColores = () => {
+    let colorf = $("color-input-f").value.toUpperCase()
+    $("text-container").style.backgroundColor = colorf
+    $("text-containerdos").style.backgroundColor = colorf
+    $("circle-f").style.backgroundColor = colorf
+    $("span-f").textContent = colorf
 
     let colortxt = $("color-input-txt").value.toUpperCase()
-    $("toptext").style.color=colortxt
-    $("bottomtext").style.color=colortxt
-    $("circle-c").style.backgroundColor=colortxt
-    $("span-txt").textContent= colortxt
+    $("toptext").style.color = colortxt
+    $("bottomtext").style.color = colortxt
+    $("circle-c").style.backgroundColor = colortxt
+    $("span-txt").textContent = colortxt
 
     let colorimg = $("color-input-img").value.toUpperCase()
-    $("imagen").style.backgroundColor= colorimg
-    $("circleimg").style.backgroundColor= colorimg
-    $("circletext").textContent= colorimg
+    $("imagen").style.backgroundColor = colorimg
+    $("circleimg").style.backgroundColor = colorimg
+    $("circletext").textContent = colorimg
 
 }
 
-let colorImg=()=>{
+let colorImg = () => {
     let colorimg = $("color-input-img").value.toUpperCase()
-    $("imagen").style.backgroundColor= colorimg
-    $("circleimg").style.backgroundColor= colorimg
-    $("circletext").textContent= colorimg
+    $("imagen").style.backgroundColor = colorimg
+    $("circleimg").style.backgroundColor = colorimg
+    $("circletext").textContent = colorimg
 }
 
-let inicializarColores=()=>{
+let inicializarColores = () => {
     $("color-input-f").addEventListener("input", actualizarColores)
     $("color-input-txt").addEventListener("input", actualizarColores)
 }
-let inicializarImg=()=>{
-    $("color-input-img").addEventListener("input",colorImg)
+let inicializarImg = () => {
+    $("color-input-img").addEventListener("input", colorImg)
 }
-/*Realizamos el mismo procedimiento que en el cambio de fuente, excepto que en lugar
-de fontSize escribiremos color y backgroundColor. El evento utilizado es input. */
 
 
 // Cambio tamaño de fuente
@@ -164,33 +151,38 @@ de fontSize escribiremos color y backgroundColor. El evento utilizado es input. 
 //////////////////
 
 //INPUT IMAGEN POR URL
-
-/*Los IDs ya fueron guardados anteriormente*/
-
-/*Se declara la función que vinculará el link de la imegen ingresada en el input URL a la etiqueta img*/
-
-let imageChange = () => {
-    let urlImagen = document.getElementById("url_input");
+// se le pasa un evento que va a ser la url del input.  se verifica que haya algun valor antes de intentar asignar el background
+// se cambió el tag <img por un div dado que sino iban a necesitar un fallback image para resolver el hecho de que si no hay
+// imagen se muestra un iconito de imagen rota.
+let imageChange = (evento) => {
+    /*let urlImagen = document.getElementById("url_input");
     let imagen = document.getElementById("imagen");
     imagen.src = urlImagen.value;
+    */
+    if (evento.target.value.length !== 0) {
+        $('meme-img').style.backgroundImage = `url("${evento.target.value}")`
     }
+}
 
 let iniciarImage = () => {
     $('url_input').addEventListener('input', imageChange);
-    }
+}
 
-    
+// Se le pasa el target (section-imagen o section-text) y se le agrega la clase 'oculto'
+const hideAside = (target) => {
+    $(target).classList.add('oculto')
+}
+
 
 /////////////////////////
 /// INICIALIZACIONES ///
 ///////////////////////
 
-const inicializar=()=>{
+const inicializar = () => {
     comenzarText()
     inicializarColores()
     iniciarImage()
     inicializarImg()
 }
-window.onload=inicializar
+window.onload = inicializar
 
-// Aca inicializamos las funciones
