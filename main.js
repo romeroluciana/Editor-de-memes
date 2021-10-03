@@ -146,6 +146,35 @@ let inicializarImg = () => {
 
 
 
+// Contorno del texto
+
+let outlineNoneButton = document.getElementById('outline_none');
+let outlineLightButton = document.getElementById('outline_white');
+let outlineDarkButton = document.getElementById('outline_black');
+let topText = document.getElementById('toptext');
+let bottomText = document.getElementById('bottomtext');
+
+changeOutlineNone = () => {
+    topText.style.textShadow = '0 0 3.5px transparent';
+    bottomText.style.textShadow = '0 0 3.5px transparent';
+}
+
+changeOutlineLight = () => {
+    topText.style.textShadow = '0 0 3.5px #fff';
+    bottomText.style.textShadow = '0 0 3.5px #fff';
+}
+
+changeOutlineDark = () => {
+    topText.style.textShadow = '0 0 3.5px #000';
+    bottomText.style.textShadow = '0 0 3.5px #000';
+}
+
+outlineNoneButton.addEventListener('click', changeOutlineNone);
+outlineLightButton.addEventListener('click', changeOutlineLight);
+outlineDarkButton.addEventListener('click', changeOutlineDark);
+
+
+
 //////////////////
 // ASIDE IMAGEN //
 //////////////////
@@ -155,10 +184,6 @@ let inicializarImg = () => {
 // se cambió el tag <img por un div dado que sino iban a necesitar un fallback image para resolver el hecho de que si no hay
 // imagen se muestra un iconito de imagen rota.
 let imageChange = (evento) => {
-    /*let urlImagen = document.getElementById("url_input");
-    let imagen = document.getElementById("imagen");
-    imagen.src = urlImagen.value;
-    */
     if (evento.target.value.length !== 0) {
         $('meme-img').style.backgroundImage = `url("${evento.target.value}")`
     }
