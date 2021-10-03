@@ -146,6 +146,35 @@ let inicializarImg = () => {
 
 
 
+//Alineacion de texto
+
+let alignLeftButton = document.getElementById('alignLeft');
+let alignCenterButton = document.getElementById('alignCenter');
+let alignRightButton = document.getElementById('alignRight');
+let textUp = document.getElementById('toptext');
+let textBottom = document.getElementById('bottomtext');
+
+changeTextAlignLeft = () => {
+    textUp.style.textAlign = "left";
+    textBottom.style.textAlign = "left";
+}
+
+changeTextAlignCenter = () => {
+    textUp.style.textAlign = "center";
+    textBottom.style.textAlign = "center";
+}
+
+changeTextAlignRight = () => {
+    textUp.style.textAlign = "right";
+    textBottom.style.textAlign = "right";
+}
+
+alignLeftButton.addEventListener('click', changeTextAlignLeft);
+alignCenterButton.addEventListener('click', changeTextAlignCenter);
+alignRightButton.addEventListener('click', changeTextAlignRight);
+
+
+
 // Contorno del texto
 
 let outlineNoneButton = document.getElementById('outline_none');
