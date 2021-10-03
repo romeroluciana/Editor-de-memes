@@ -81,9 +81,11 @@
     <aside id="aside">
         <section id="section-imagen" class="aside" >
             <!--Agregado el boton para cerrar el aside ver funcion en main.js y estilos en aside.css-->
-            <button class="close-aside" onclick="hideAside('section-imagen')">
-                X
-            </button>
+            <div class = close_button>   
+                <button class="close-aside" onclick="hideAside('section-imagen')">
+                    x
+                </button>
+            </div> 
             <h2 class="subtitle">IMAGEN</h2>
             <div class="aside-container">
                 <label for="url-input" class="bold-label">URL</label>
@@ -153,9 +155,11 @@
                      ASIDE TEXTO        
                 **********************************-->
         <section id="section-texto" class="aside text-aside oculto">
-            <button class="close-aside" onclick="hideAside('section-texto')">
-                X
-            </button>
+            <div class = close_button>
+                <button class="close-aside" onclick="hideAside('section-texto')">
+                    x
+                </button>
+            </div>
             <div>
                 <h2 class="subtitle">TEXTO</h2>
             </div>
@@ -236,9 +240,9 @@
                 <div>
                     <h3 class="bold-label">CONTORNO</h3>
                     <div class="contour-buttons">
-                        <button>Ninguno</button>
-                        <button>Claro</button>
-                        <button>Oscuro</button>
+                        <button id = outline_none>Ninguno</button>
+                        <button id = outline_white>Claro</button>
+                        <button id = outline_black>Oscuro</button>
                     </div>
                 </div>
 
