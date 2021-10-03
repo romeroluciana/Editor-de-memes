@@ -144,6 +144,17 @@ let inicializarImg = () => {
 
 // Cambio tamaño de fuente
 
+let textSize = document.getElementById('textSizeSelector');
+let upText = document.getElementById('toptext');
+let downText = document.getElementById('bottomtext');
+
+changeTextSize = () => {
+    upText.style.fontSize = textSize.value + "px";
+    downText.style.fontSize = textSize.value + "px";
+}
+
+textSize.addEventListener('click', changeTextSize);
+
 
 
 //Alineacion de texto
