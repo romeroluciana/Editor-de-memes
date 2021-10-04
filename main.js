@@ -120,7 +120,7 @@ let actualizarColores = () => {
     $("span-txt").textContent = colortxt
 
     let colorimg = $("color-input-img").value.toUpperCase()
-    $("imagen").style.backgroundColor = colorimg
+    $("meme-img").style.backgroundColor = colorimg
     $("circleimg").style.backgroundColor = colorimg
     $("circletext").textContent = colorimg
 
@@ -128,7 +128,7 @@ let actualizarColores = () => {
 
 let colorImg = () => {
     let colorimg = $("color-input-img").value.toUpperCase()
-    $("imagen").style.backgroundColor = colorimg
+    $("meme-img").style.backgroundColor = colorimg
     $("circleimg").style.backgroundColor = colorimg
     $("circletext").textContent = colorimg
 }
