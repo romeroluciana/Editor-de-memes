@@ -59,7 +59,7 @@
                 </p>
             </div>
             <div class="img-container">
-                <div class="meme-img" id="meme-img"> </div>
+                <div class="meme-img blend" id="meme-img"> </div>
             </div>
             <div class="text-container" id="text-containerdos">
                 <p id="bottomtext" class="meme-text bottom">
@@ -75,8 +75,8 @@
     <!--Fin Main-->
 
     <!--**********************************
-                       ASIDE          
-                **********************************-->
+                    ASIDE IMAGEN    
+        **********************************-->
 
     <aside id="aside">
         <section id="section-imagen" class="aside" >
@@ -102,7 +102,7 @@
                         </span>
                     </div>
                     <div class="select-blemd">
-                        <select name="blend-mode" class="blend-list">
+                        <select name="blend-mode" class="blend-list" onchange="changeBlendMode()">
                             <option value="unset">Ninguno</option>
                             <option value="lighten">Aclarar</option>
                             <option value="darken">Oscurecer</option>

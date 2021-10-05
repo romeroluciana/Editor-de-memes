@@ -9,10 +9,18 @@ const saturationRange = document.getElementById('saturation');
 const invertRange = document.getElementById('invert');
 const memeImg = document.querySelector('.meme-img');
 const btnRestablecer = document.querySelector(".refresh-btn");
+const colorInput = document.querySelector(".color-input");
+const selectBlend = document.querySelector(".blend-list");
 const arrayIniciales = ['1', '1', '100', '0', '0', '0', '0', '100', '0'];
 const unidades = ['', '', '%', 'px', '%', '%', 'deg', '%', ''];
 const txtFiltro = ['brightness', 'opacity', 'contrast', 'blur', 'grayscale', 'sepia', 'hue-rotate', 'saturate', 'invert'];
 const filtros = [brightnessRange, opacityRange, contrastRange, blurRange, grayscaleRange, sepiaRange, hueRange, saturationRange, invertRange];
+
+const changeBlendMode = () => {
+    let color = colorInput.value;
+    memeImg.style.backgroundColor = color;
+    memeImg.style.backgroundBlendMode = selectBlend.value;
+}
 
 const change = () => {
     memeImg.style.filter = '';
