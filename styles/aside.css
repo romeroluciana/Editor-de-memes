@@ -112,7 +112,7 @@ input[type='color']{
 }
 
 .span .circle {
-  background-color: var(--selected-color);
+  background-color: #000000;
   width: 15px;
   height: 15px;
   border-radius: 50%;

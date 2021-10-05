@@ -23,7 +23,7 @@ const changeMode = () => {
     iconToggle.classList.toggle('far')
     iconToggle.classList.toggle('fas')
     const modeStatus = document.getElementsByClassName('dark-mode');
-    textToggle.textContent = modeStatus.length > 0 ? "Modo Claro" : "Modo Oscuro"
+    textToggle.textContent = modeStatus.length > 0 ? "Modo claro" : "Modo oscuro"
 }
 botonToggle.addEventListener('click', changeMode)
 
