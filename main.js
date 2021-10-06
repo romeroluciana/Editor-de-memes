@@ -239,47 +239,57 @@ const hideAside = (target) => {
 }
 
 
-/////////SELECCIONAR ARCHIVO////////////////
+///////// SELECCIONAR ARCHIVO / utilización de canvas ////////////////
 
-let cambioTexto =(evt) =>{
-    let id = evt.target.id;
-     redrawMeme(window.imageSrc);
-   }
-   //------
-   let redrawMeme = (image)=> {
-
+   let redibujar = (image)=> {
      let canvas = document.querySelector('canvas');
      let ctx = canvas.getContext("2d");
+     /* La etiqueta que utilizamos en nuestro html "canvas" inicialmente está en blanco y
+     para poder mostrar algo, el script primero necesita acceder al contexto a renderizar
+     y "dibujar" sobre este, para eso, utilizamos el metodo "getContext", el cual obtiene
+     el contexto a renderizar y sus funciones de dibujo. Toma el parametro segun el tipo de contexto,
+     en este caso "2d". */
+
      if (image != null)
        ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
-      // clear previous
-     ctx.clearRect (0, 0,  canvas.width, canvas.height);
-     if (image != null)
-               ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+       
+       /* Esto agrega los parámetros width y height,
+        que indican el tamaño al que se debe escalar la imagen. */
    }
-   
-   let saveFile = () => {
-     window.open(document.querySelector('canvas').toDataURL());
-   }
- 
-   let handleFileSelect=(evt)=> {
-     let file = evt.target.files[0];
+
+   let inputArchivo = document.querySelector("#input-file");
+   /* Creamos una nueva variable para guardar el input de seleccionar archivo así podemos
+   utilizarlo*/
+
+   let manejarArchivo = (e) => {
+     let inputArchivo = e.target.files[0];
+     /* "files" es una FileList de objetos File. FileList representa una secuencia de conjunto de objetos File
+      por ejemplo, <input type= "file" multiple> */
      let reader = new FileReader();
+     /* FileReader se puede utilizar para leer un archivo de forma asíncrona mediante el control de eventos
+      de JavaScript. */
      reader.onload = function(fileObject) {
+       /* Cuando el archivo se termine de leer (de cargar, onload) se ejecuta la funcion que tiene por parametro
+       fileObject*/ 
        let data = fileObject.target.result;
+       /*La propiedad result de FileReader retorna el contenido del archivo. Si no me equivoco vendria a ser
+       parecido a value*/ 
        let image = new Image();
+       /* new crea un objeto javascript */
        image.onload = function() {
          window.imageSrc = this;
-         redrawMeme(window.imageSrc, null, null);
+         redibujar(window.imageSrc, null, null);
        }
        image.src = data;
+       /* la src de la nueva imagen va a ser el resultado del input */
      };
-     reader.readAsDataURL(file)
+     reader.readAsDataURL(inputArchivo)
+     /* esto es para que se lea como una url */
+
+     
    }
-       let file = document.querySelector("#file");
-       file.onchange = handleFileSelect;
-   document.getElementById('file').addEventListener('change', handleFileSelect, false);
-   document.querySelector('button').addEventListener('click', saveFile, false);
+       document.getElementById('input-file').addEventListener('change', manejarArchivo);
+
 
 
 /////////////////////////
