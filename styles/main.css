@@ -8,6 +8,12 @@
 .main{
     padding: 1em;
 }
+
+.meme-img{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
 .meme-container{
     width:100%;
     max-width: 500px;
@@ -23,6 +29,11 @@
     height: 100%;
     width: 100%;
 }
+canvas{
+    
+    
+}
+
 
 .text-container{
     background: #ffffff;

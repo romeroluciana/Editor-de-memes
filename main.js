@@ -239,6 +239,49 @@ const hideAside = (target) => {
 }
 
 
+/////////SELECCIONAR ARCHIVO////////////////
+
+let cambioTexto =(evt) =>{
+    let id = evt.target.id;
+     redrawMeme(window.imageSrc);
+   }
+   //------
+   let redrawMeme = (image)=> {
+
+     let canvas = document.querySelector('canvas');
+     let ctx = canvas.getContext("2d");
+     if (image != null)
+       ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+      // clear previous
+     ctx.clearRect (0, 0,  canvas.width, canvas.height);
+     if (image != null)
+               ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+   }
+   
+   let saveFile = () => {
+     window.open(document.querySelector('canvas').toDataURL());
+   }
+ 
+   let handleFileSelect=(evt)=> {
+     let file = evt.target.files[0];
+     let reader = new FileReader();
+     reader.onload = function(fileObject) {
+       let data = fileObject.target.result;
+       let image = new Image();
+       image.onload = function() {
+         window.imageSrc = this;
+         redrawMeme(window.imageSrc, null, null);
+       }
+       image.src = data;
+     };
+     reader.readAsDataURL(file)
+   }
+       let file = document.querySelector("#file");
+       file.onchange = handleFileSelect;
+   document.getElementById('file').addEventListener('change', handleFileSelect, false);
+   document.querySelector('button').addEventListener('click', saveFile, false);
+
+
 /////////////////////////
 /// INICIALIZACIONES ///
 ///////////////////////
@@ -250,4 +293,5 @@ const inicializar = () => {
     inicializarImg()
 }
 window.onload = inicializar
+
 
